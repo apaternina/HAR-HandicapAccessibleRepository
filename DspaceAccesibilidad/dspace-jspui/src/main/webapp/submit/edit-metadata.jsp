@@ -675,14 +675,19 @@
       StringBuffer sb = new StringBuffer();
       String val, auth;
       int conf= 0;
+      String id_field="";
 
       if (fieldCount == 0)
          fieldCount = 1;
-
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">");
-        if(label.equals("Title")){label="Título";}
-        else if(label.equals("Other Titles")){label="Otros Títulos";}
-        else if(label.equals("Citation")){label="Citación";}
+      
+      if(label.equals("Publisher")){label="Editor";id_field="dc_publisher";}
+        else if(label.equals("Other Titles")){label="Otros Títulos";id_field="dc_title_alternative";}
+        else if(label.equals("Citation")){label="Citación";id_field="dc_identifier_citation";}
+        else if(label.equals("Title")){label="Título";id_field="dc_title";}
+      
+      sb.append("<div class=\"row\"><label for='"+id_field+"' class=\"col-md-2"+ (required?" label-required":"") +"\">");
+        
+        
         sb.append(label)
         .append("</label>");
         sb.append("<div class=\"col-md-10\">");  
@@ -1024,11 +1029,9 @@
       int j;
       String id_field="";
  if(label.equals("Type")){label="Tipo";id_field="select_tipo";}else if(label.equals("Language")){label="Lenguaje";id_field="select_lenguaje";}
-      sb.append("<div class=\"row\"><label for='select_Type' class=\"col-md-2"+ (required?" label-required":"") +"\">");
-       
+      sb.append("<div class=\"row\"><label for='"+id_field+"' class=\"col-md-2"+ (required?" label-required":"") +"\">"); 
         sb.append(label)
         .append("</label>");
-
       sb.append("<span class=\"col-md-8\">")
         .append("<select class=\"form-control\" id='");
          sb.append(id_field)     
