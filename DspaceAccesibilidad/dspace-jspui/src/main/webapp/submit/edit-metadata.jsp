@@ -309,7 +309,7 @@
          
          sb.append("<span class=\"col-md-5\"><input id='input_Author' placeholder=\"" )
            //.append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.lastname")))
-           .append("entre")
+           .append("Apellidos del autor, Ejemplo: <strong>García</strong> ")
            .append("\" class=\"form-control\" type=\"text\" name=\"")
            //.append(last.toString()) 
            .append("\" size=\"23\" ");
@@ -319,8 +319,9 @@
          }
          sb.append("value=\"")
            .append(dpn.getLastName().replaceAll("\"", "&quot;")) // Encode "
-                   .append("\"/></span><span class=\"col-md-5\"><input placeholder=\"")
-                   .append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.firstname")))
+                  .append("\"/></span><span class=\"col-md-5\"><input placeholder=\"")
+                   //.append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.firstname")))
+                  .append("Nombres del Autor, Ejemplo: <strong>Pedro J.</strong> ")
                    .append("\" class=\"form-control\" type=\"text\" name=\"")
                    .append(first.toString())
            .append("\" size=\"23\" ");
@@ -384,7 +385,8 @@
          fieldCount = 1;
 
       sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-        .append(label)
+        //.append(label)      
+         .append("Fecha de emisión")      
         .append("</label><div class=\"col-md-10\">");
       
       for (int i = 0; i < fieldCount; i++)
@@ -395,9 +397,13 @@
             dateIssued = new org.dspace.content.DCDate("");
     
          sb.append("<div class=\"row col-md-12\"><div class=\"input-group col-md-10\"><div class=\"row\">")
+                 
 			.append("<span class=\"input-group col-md-6\"><span class=\"input-group-addon\">")
+               .append("<label for='input_mes' style='margin-bottom: 0px;font-weight: normal;' >")
+                 
+                 
          	.append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.month"))
-            .append("</span><select class=\"form-control\" name=\"")
+            .append("</span></label><select id='input_mes' class=\"form-control\" name=\"")
             .append(fieldName)
             .append("_month");
          if (repeatable && i>0)
@@ -410,7 +416,7 @@
          }
          sb.append("\"><option value=\"-1\"")
             .append((dateIssued.getMonth() == -1 ? " selected=\"selected\"" : ""))
-//          .append(">(No month)</option>");
+            .append(">(No mes)</option>")
             .append(">")
             .append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.no_month"))
             .append("</option>");
@@ -427,8 +433,9 @@
     
          sb.append("</select></span>")
 	            .append("<span class=\"input-group col-md-2\"><span class=\"input-group-addon\">")
+                 .append("<label for='input_day' style='margin-bottom: 0px;font-weight: normal;' >")
                 .append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.day"))
-                .append("</span><input class=\"form-control\" type=\"text\" name=\"")
+                .append("</span><input id='input_day' class=\"form-control\" type=\"text\" name=\"")
             .append(fieldName)
             .append("_day");
          if (repeatable && i>0)
@@ -441,8 +448,9 @@
             .append((dateIssued.getDay() > 0 ?
                      String.valueOf(dateIssued.getDay()) : "" ))
                 .append("\"/></span><span class=\"input-group col-md-4\"><span class=\"input-group-addon\">")
+                 .append("<label for='input_anio' style='margin-bottom: 0px;font-weight: normal;' >")
                 .append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.year"))
-                .append("</span><input class=\"form-control\" type=\"text\" name=\"")
+                .append("</label></span><input id='input_anio' class=\"form-control\" type=\"text\" name=\"")
             .append(fieldName)
             .append("_year");
          if (repeatable && i>0)
@@ -510,7 +518,8 @@
            sn = new org.dspace.content.DCSeriesNumber();
 
          sb.append("<div class=\"row col-md-12\"><span class=\"col-md-5\"><input class=\"form-control\" type=\"text\" name=\"")
-           .append(fieldName)
+          .append(fieldName)
+                 
            .append("_series");
          if (repeatable && i!= fieldCount)
            sb.append("_").append(i+1);
@@ -519,7 +528,8 @@
              sb.append("\" disabled=\"disabled");
          }
          sb.append("\" placeholder=\"")
-           .append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.seriesname").replaceAll("\"", "&quot;"));
+                 .append("Nombre de la serie(s)");
+           //.append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.seriesname").replaceAll("\"", "&quot;"));
          sb.append("\" size=\"23\" value=\"")
            .append(sn.getSeries().replaceAll("\"", "&quot;"))
            .append("\"/></span><span class=\"col-md-5\"><input class=\"form-control\" type=\"text\" name=\"")
@@ -532,7 +542,8 @@
              sb.append("\" disabled=\"disabled");
          }
          sb.append("\" placeholder=\"")
-           .append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.paperno").replaceAll("\"", "&quot;"));
+            .append("Número del reporte");    
+           //.append(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.paperno").replaceAll("\"", "&quot;"));
          sb.append("\" size=\"23\" value=\"")
            .append(sn.getNumber().replaceAll("\"", "&quot;"))
            .append("\"/></span>\n");
