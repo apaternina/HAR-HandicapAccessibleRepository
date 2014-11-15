@@ -593,7 +593,6 @@
          fieldCount = 1;
 
       sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-      	.append(label)
       	.append("</label><div class=\"col-md-10\">");
       
       for (int i = 0; i < fieldCount; i++)
