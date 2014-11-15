@@ -162,7 +162,7 @@
 %>
 </header>
 
-
+<!--este es un cambio -->
 <main  id="content" role="main">
 <div  id ="content2" class="container banner">
 	<div class="row">
