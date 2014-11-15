@@ -80,8 +80,9 @@
 %>
                             <option value="<%= collections[i].getID() %>"><%= collections[i].getMetadata("name") %></option>
 <%
+ }
 %>
-                        </select>        }
+                        </select>       
 
 					</div><br/>
             <%-- Hidden fields needed for SubmissionController servlet to know which step is next--%>
