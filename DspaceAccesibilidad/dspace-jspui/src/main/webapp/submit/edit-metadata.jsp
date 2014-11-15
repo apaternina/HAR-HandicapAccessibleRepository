@@ -507,7 +507,8 @@
          fieldCount = 1;
 
       sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-      	.append(label)
+         .append("Series/Reporte No.")
+         //.append(label)
       	.append("</label><div class=\"col-md-10\">");
       
       for (int i = 0; i < fieldCount; i++)
@@ -591,7 +592,6 @@
 
       if (fieldCount == 0)
          fieldCount = 1;
-
       sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
       	.append("</label><div class=\"col-md-10\">");
       
@@ -614,7 +614,7 @@
          if (authorityType != null)
          {
         	 sb.append("<div class=\"col-md-10\">");
-         }
+         }  
          sb.append("<textarea class=\"form-control\" name=\"").append(fieldNameIdx)
            .append("\" rows=\"4\" cols=\"45\" id=\"")
            .append(fieldNameIdx).append("_id\" ")
@@ -679,10 +679,13 @@
       if (fieldCount == 0)
          fieldCount = 1;
 
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-        .append(label)
+      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">");
+        if(label.equals("Title")){label="Título";}
+        else if(label.equals("Other Titles")){label="Otros Títulos";}
+        else if(label.equals("Citation")){label="Citación";}
+        sb.append(label)
         .append("</label>");
-      sb.append("<div class=\"col-md-10\">");  
+        sb.append("<div class=\"col-md-10\">");  
       for (int i = 0; i < fieldCount; i++)
       {
            if (i < defaults.length)
@@ -707,6 +710,7 @@
         	   sb.append("<div class=\"row col-md-10\">");
            }
            sb.append("<input class=\"form-control\" type=\"text\" name=\"")
+                   
              .append(fieldNameIdx)
              .append("\" id=\"")
              .append(fieldNameIdx).append("\" size=\"50\" value=\"")
@@ -817,7 +821,8 @@
          else
          {
            sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
-             .append(fieldParam)
+             
+                   .append(fieldParam)
              .append("\" size=\"15\"")
              .append((hasVocabulary(vocabulary)&&closedVocabulary) || readonly?" disabled=\"disabled\" ":"")
              .append("/>")
@@ -842,6 +847,7 @@
                  if (i < defaults.length)
                  {
                    sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
+                           
                      .append(fieldParam)
                      .append("\" size=\"15\" value=\"")
                      .append(defaults[i].value.replaceAll("\"", "&quot;"))
@@ -918,8 +924,9 @@
       if (fieldCount == 0)
          fieldCount = 1;
 
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-      	.append(label)
+      sb.append("<div class=\"row\"><label for='select_identificadores' class=\"col-md-2"+ (required?" label-required":"") +"\">");
+      	if(label.equals("Identifiers")){label="Identificadores";}
+             sb.append(label)
       	.append("</label>");
       sb.append("<div class=\"col-md-10\">");
       for (int j = 0; j < fieldCount; j++)
@@ -938,8 +945,9 @@
          }
 
          // do the dropdown box
-         sb.append("<div class=\"row col-md-12\"><span class=\"input-group col-md-10\"><span class=\"input-group-addon\"><select name=\"")
+         sb.append("<div class=\"row col-md-12\"><span class=\"input-group col-md-10\"><span class=\"input-group-addon\"><select id='select_identificadores' name=\"")
            .append(fieldName)
+                 
            .append("_qualifier");
          if (repeatable && j!= fieldCount-1)
            sb.append("_").append(j+1);
@@ -962,7 +970,7 @@
          }
       
          // do the input box
-         sb.append("</select></span><input class=\"form-control\" type=\"text\" name=\"")
+         sb.append("</select></span><input class=\"form-control\" placeholder='Descripción del identificador' type=\"text\" name=\"")
            .append(fieldName)
            .append("_value");
          if (repeatable && j!= fieldCount-1)
@@ -1014,13 +1022,17 @@
       Iterator vals;
       String display, value;
       int j;
-
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-        .append(label)
+      String id_field="";
+ if(label.equals("Type")){label="Tipo";id_field="select_tipo";}else if(label.equals("Language")){label="Lenguaje";id_field="select_lenguaje";}
+      sb.append("<div class=\"row\"><label for='select_Type' class=\"col-md-2"+ (required?" label-required":"") +"\">");
+       
+        sb.append(label)
         .append("</label>");
 
       sb.append("<span class=\"col-md-8\">")
-        .append("<select class=\"form-control\" name=\"")
+        .append("<select class=\"form-control\" id='");
+         sb.append(id_field)     
+              .append("' name=\"")
         .append(fieldName)
         .append("\"");
       if (repeatable)
@@ -1062,9 +1074,8 @@
       StringBuffer sb = new StringBuffer();
 
       sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
-      .append(label)
+              .append(label)
       .append("</label>");
-
       sb.append("<span class=\"col-md-8\">")
         .append(doAuthority(pageContext, fieldName, 0,  defaults.length,
                               fieldName, null, Choices.CF_UNSET, false, repeatable,
@@ -1321,18 +1332,22 @@
            {
            		%>
            		<div class="help-block">
+                              
                 	<%= inputs[z].getHints() %>
+                          
                 <%
                     if (hasVocabulary(vocabulary) &&  !readonly)
                     {
              	%>
              						<span class="pull-right">
+                                                          
                                              <dspace:popup page="/help/index.html#controlledvocabulary"><fmt:message key="jsp.controlledvocabulary.controlledvocabulary.help-link"/></dspace:popup>
              						</span>
              	<%
                     }
 				%>
 				</div>
+                                
 				<%
            }
        }
@@ -1412,6 +1427,7 @@
 <%-- Hidden fields needed for SubmissionController servlet to know which item to deal with --%>
         <%= SubmissionController.getSubmissionParameters(context, request) %>
 <div class="row">
+
 <%  //if not first page & step, show "Previous" button
 		if(!(SubmissionController.isFirstStep(request, si) && pageNum<=1))
 		{ %>
