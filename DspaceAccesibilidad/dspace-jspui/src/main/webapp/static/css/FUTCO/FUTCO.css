@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-nov-2014, 22:36:21
+    Author     : Dspace
+*/
+
+
+.sr-only{
+  
+    //display: none;
+    text-indent: -5000px;
+    
+}
+
+a[id="saltarContent"]:focus{
+    text-align: center;
+    width: 150px !important;
+    color: white !important;
+    height: 20px !important;
+    background-color: #ba2710 !important;
+    position: fixed !important;
+    text-indent:0px !important;
+    clip: initial;
+    margin-top: -10px;
+}
+
+
+.item_li_de_ul{
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+}
+/*.padding_ul_li{
+    display: flex;
+}*/
+
+.padding_ul{
+    padding: 0px;
+}
+
+.padding_ul_li:hover{
+    background-image: linear-gradient(to bottom,#428bca 0,#3071a9 100%);
+    
+}
+.padding_ul_li a:hover{
+    text-decoration: none !important;
+    color:white !important;
+}
+
+.padding_ul_li:focus{
+  //  background-image: linear-gradient(to bottom,#428bca 0,#3071a9 100%) !important;
+}
+.padding_ul_li a:focus{
+    text-decoration: none !important;
+    color:white !important;
+    background-image: linear-gradient(to bottom,#428bca 0,#3071a9 100%) !important;
+}
+
+.alertMensaje{
+    /*display: none !important;*/
+    text-indent:-5000px !important;
+}
+
+
