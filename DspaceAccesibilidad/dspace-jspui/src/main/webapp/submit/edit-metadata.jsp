@@ -275,7 +275,7 @@
       if (fieldCount == 0)
          fieldCount = 1;
 
-      sb.append("<div class=\"row\"><label for='input_Author' class=\"col-md-2"+ (required?" label-required":"") +"\">").append("Autor").append("</label>");
+      sb.append("<div class=\"row\"><label  class=\"col-md-2"+ (required?" label-required":"") +"\">").append("Autor").append("</label>");
 	  sb.append("<div class=\"col-md-10\">");     
       for (int i = 0; i < fieldCount; i++)
       {
@@ -588,11 +588,16 @@
       int fieldCount = defaults.length + fieldCountIncr;
       StringBuffer sb = new StringBuffer();
       String val, auth;
+      String id_fieldFor="";
+      
       int conf = unknownConfidence;
 
       if (fieldCount == 0)
          fieldCount = 1;
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
+      if(fieldName.equals("dc_description_abstract")){id_fieldFor="dc_description_abstract_id";}
+      if(fieldName.equals("dc_description_sponsorship")){id_fieldFor="dc_description_sponsorship_id";}
+      if(fieldName.equals("dc_description")){id_fieldFor="dc_description_id";}
+      sb.append("<div class=\"row\"><label for='"+id_fieldFor+"' class=\"col-md-2"+ (required?" label-required":"") +"\">")
       	.append("</label><div class=\"col-md-10\">");
       
       for (int i = 0; i < fieldCount; i++)
@@ -615,7 +620,7 @@
          {
         	 sb.append("<div class=\"col-md-10\">");
          }  
-         sb.append("<textarea class=\"form-control\" name=\"").append(fieldNameIdx)
+         sb.append("<textarea  class=\"form-control\" name=\"").append(fieldNameIdx)
            .append("\" rows=\"4\" cols=\"45\" id=\"")
            .append(fieldNameIdx).append("_id\" ")
            .append((hasVocabulary(vocabulary)&&closedVocabulary)||readonly?" disabled=\"disabled\" ":"")
@@ -778,7 +783,7 @@
       if (fieldCount == 0)
          fieldCount = 1;
 
-      sb.append("<div class=\"row\"><label class=\"col-md-2"+ (required?" label-required":"") +"\">")
+      sb.append("<div class=\"row\"><label for='input_PalabrasClaves' class=\"col-md-2"+ (required?" label-required":"") +"\">")
         .append(label)
         .append("</label>");
       sb.append("<div class=\"col-md-10\">");
@@ -799,7 +804,8 @@
                  
          if (i < defaults.length)
          {
-           sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
+              
+           sb.append("<span class=\"col-md-4\"><input id='input_PalabrasClaves' class=\"form-control\" type=\"text\" name=\"")
              .append(fieldParam)
              .append("\" size=\"15\" value=\"")
              .append(defaults[i].value.replaceAll("\"", "&quot;"))
@@ -825,9 +831,9 @@
          }
          else
          {
-           sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
              
-                   .append(fieldParam)
+           sb.append("<span class=\"col-md-4\"><input id=\"input_PalabrasClaves\" class=\"form-control\" type=\"text\" name=\"")
+             .append(fieldParam)
              .append("\" size=\"15\"")
              .append((hasVocabulary(vocabulary)&&closedVocabulary) || readonly?" disabled=\"disabled\" ":"")
              .append("/>")
@@ -851,7 +857,7 @@
         
                  if (i < defaults.length)
                  {
-                   sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
+                   sb.append("<span class=\"col-md-4\"> <input id=\"input_PalabrasClaves\" class=\"form-control\" type=\"text\" name=\"")
                            
                      .append(fieldParam)
                      .append("\" size=\"15\" value=\"")
@@ -877,7 +883,7 @@
                  }
                  else
                  {
-                   sb.append("<span class=\"col-md-4\"><input class=\"form-control\" type=\"text\" name=\"")
+                   sb.append("<span class=\"col-md-4\"><input id='input_PalabrasClaves' class=\"form-control\" type=\"text\" name=\"")
                      .append(fieldParam)
                      .append("\" size=\"15\"")
                      .append((hasVocabulary(vocabulary)&&closedVocabulary)||readonly?" disabled=\"disabled\" ":"")
