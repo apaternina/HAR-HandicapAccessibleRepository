@@ -6,10 +6,9 @@
 
 /*Fecha : 2041114
  *Autor : Antonio Jose Paternina  
- *Descripción : Muestra los mensajes de alertas las paginas de dspace
- *              Nota :Se quita este elemento porque los lectores de pantalla leen lo que esta dentro de la etiqueta noscript  
+ *Descripción : Nota :Se quita este elemento porque los lectores de pantalla leen lo que esta dentro de la etiqueta noscript  
  */
-function quitarNoScript(){
+function quitarNoScriptNavbar(){
     try {
         $(function(){
             $("#li_popupAyuda a").attr('tabindex','');    
@@ -20,6 +19,26 @@ function quitarNoScript(){
     }
 }
 
+/*Fecha : 2041114
+ *Autor : Antonio Jose Paternina  
+ *Descripción : Nota :Se quita este elemento porque los lectores de pantalla leen lo que esta dentro de la etiqueta noscript  
+ */
+function quitarNoScript(){
+    try {
+        $(function(){
+            $("noscript").html('');
+            $("noscript").text('');
+	});
+    } catch (e) {
+     //   alert('¡Ha ocurrido un error en la función quitarNoScript '+e.message);
+    }
+}
+
+/*Fecha : 2041114
+ *Autor : Antonio Jose Paternina  
+ *Descripción : Muestra los mensajes de alertas las paginas de dspace
+ *              Nota :Se quita este elemento porque los lectores de pantalla leen lo que esta dentro de la etiqueta noscript  
+ */
 function mostraAlerta(){
         try {
          $(function(){

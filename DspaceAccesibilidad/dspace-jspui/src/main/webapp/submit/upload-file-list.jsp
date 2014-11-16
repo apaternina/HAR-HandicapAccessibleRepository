@@ -75,7 +75,9 @@
     boolean isAdvancedForm = ConfigurationManager.getBooleanProperty("webui.submission.restrictstep.enableAdvancedForm", false);
 
 %>
-
+<script  type="text/javascript">
+    quitarNoScript();
+    </script>
 <dspace:layout style="submission" locbar="off" navbar="off" titlekey="jsp.submit.upload-file-list.title">
 
     <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
@@ -88,7 +90,8 @@
     if (justUploaded)
     {
 %>
-		<h1><fmt:message key="jsp.submit.upload-file-list.heading1"/>
+		<h1 ><fmt:message key="jsp.submit.upload-file-list.heading1"/>
+                  
 		<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#uploadedfile\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
 		</h1>
         <p><fmt:message key="jsp.submit.upload-file-list.info1"/></p>
