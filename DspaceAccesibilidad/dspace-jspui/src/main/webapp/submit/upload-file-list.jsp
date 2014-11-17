@@ -110,11 +110,11 @@
         
         <table class="table" align="center" summary="Table dispalying your submitted files">
             <tr>
-				<th id="t1"  scope="col"class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading1"/></th>
-                <th id="t2" scope="col" class="oddRowOddCol"><fmt:message key="jsp.submit.upload-file-list.tableheading2"/></th>
-                <th id="t3" scope="col" class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading3"/></th>
-                <th id="t4" scope="col" class="oddRowOddCol"><fmt:message key="jsp.submit.upload-file-list.tableheading4"/></th>
-                <th id="t5" scope="col" class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading5"/></th>
+				<th id="t1"  scope="row"class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading1"/></th>
+                <th id="t2" scope="row" class="oddRowOddCol"><fmt:message key="jsp.submit.upload-file-list.tableheading2"/></th>
+                <th id="t3" scope="row" class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading3"/></th>
+                <th id="t4" scope="row" class="oddRowOddCol"><fmt:message key="jsp.submit.upload-file-list.tableheading4"/></th>
+                <th id="t5" scope="row" class="oddRowEvenCol"><fmt:message key="jsp.submit.upload-file-list.tableheading5"/></th>
 <%
     String headerClass = "oddRowEvenCol";
 

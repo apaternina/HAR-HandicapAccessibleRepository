@@ -140,7 +140,7 @@
     <%-- HACK: leftmargin, topmargin: for non-CSS compliant Microsoft IE browser --%>
     <%-- HACK: marginwidth, marginheight: for non-CSS compliant Netscape browser --%>
     <body class="undernavigation">
-        <a tabindex="1" id="saltarContent" class="sr-only"  href="#content">Ir al contenido</a>
+        <a tabindex="1" id="saltarContent" class="sr-only"  href="#content" alt="">Ir al contenido</a>
 <header class="navbar navbar-inverse navbar-fixed-top">    
     <%
     if (!navbar.equals("off"))
