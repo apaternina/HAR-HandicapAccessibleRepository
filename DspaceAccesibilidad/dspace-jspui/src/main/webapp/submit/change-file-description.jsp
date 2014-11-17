@@ -32,6 +32,10 @@
 	//get submission information object
     SubmissionInfo subInfo = SubmissionController.getSubmissionInfo(context, request);
 %>
+<script>
+    alert();
+    
+</script>
 
 <dspace:layout style="submission" locbar="off"
                navbar="off"
