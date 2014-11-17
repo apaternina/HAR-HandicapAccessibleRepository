@@ -187,7 +187,7 @@ border-color: #324F69 !important;
 
 
 div.panel-heading a {
-    color:white !important;
+    color:white;
     
 }
 
@@ -218,4 +218,50 @@ div.panel-heading a {
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small{
     color:#303030 !important;
     
+}
+
+.btn-danger,.btn-danger:focus,.btn-danger:hover{
+    background-image: none;
+    border-color: #C12E2A;
+    background-color: #800000
+}
+
+.btn_newSerch{
+    color:#000000 !important;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: black;
+    white-space: nowrap;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.alert-info{
+    background-image: none !important;
+    background-color: #eafffff;
+    color: #033B07 !important;
+    border-color: transparent !important;
+}
+.form-control_search{
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    vertical-align: middle;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.btn-warning{
+    background-image: none;
+    background-repeat: repeat-x;
+    background-color: #FFFF7C;
+    color: #0B0056;
+    border-color: transparent;
+    text-shadow: none;
 }

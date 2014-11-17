@@ -21,9 +21,9 @@
 
 <%@ page import="javax.servlet.jsp.jstl.fmt.LocaleSupport" %>
 <script>
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         alert($('#p_mensaje').text());
-    });
+    });*/
     
 </script>
 

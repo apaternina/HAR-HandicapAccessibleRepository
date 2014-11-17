@@ -168,7 +168,7 @@
          <label for="tlocation">
          	<fmt:message key="jsp.search.results.searchin"/>
          </label>
-         <select name="location" id="tlocation">
+         <select name="location" id="tlocation" class="form-control_search" >
 <%
     if (scope == null)
     {
@@ -192,7 +192,7 @@
     }
 %>                                </select><br/>
                                 <label for="query"><fmt:message key="jsp.search.results.searchfor"/></label>
-                                <input type="text" size="50" id="query" name="query" value="<%= (query==null ? "" : StringEscapeUtils.escapeHtml(query)) %>"/>
+                                <input type="text" size="50" class="form-control_search" id="query" name="query" value="<%= (query==null ? "" : StringEscapeUtils.escapeHtml(query)) %>"/>
                                 <input type="submit" id="main-query-submit" class="btn btn-primary" value="<fmt:message key="jsp.general.go"/>" />
 <% if (StringUtils.isNotBlank(spellCheckQuery)) {%>
 	<p class="lead"><fmt:message key="jsp.search.didyoumean"><fmt:param><a id="spellCheckQuery" data-spell="<%= StringEscapeUtils.escapeHtml(spellCheckQuery) %>" href="#"><%= spellCheckQuery %></a></fmt:param></fmt:message></p>
@@ -209,8 +209,9 @@
 			{
 			    boolean found = false;
 			    %>
+                            
                             <label for="filter_field_<%=idx %>" style="text-indent: -5000px;position: absolute">Filtra Por</label>
-			    <select id="filter_field_<%=idx %>" name="filter_field_<%=idx %>">
+                            <select id="filter_field_<%=idx %>" name="filter_field_<%=idx %>" class="form-control_search">
 				<%
 					for (DiscoverySearchFilter searchFilter : availableFilters)
 					{
@@ -231,7 +232,7 @@
 				%>
 				</select>
                                 <label for="filter_type_<%=idx %>" style="text-indent: -5000px;position: absolute">Criterio de busqueda</label>
-				<select id="filter_type_<%=idx %>" name="filter_type_<%=idx %>">
+                                <select id="filter_type_<%=idx %>" name="filter_type_<%=idx %>" class="form-control_search">
 				<%
 					for (String opt : options)
 					{
@@ -241,8 +242,8 @@
 				%>
 				</select>
                                 <label for="filter_value_<%=idx %>" style="text-indent: -5000px;position: absolute">Palabra a buscar</label>
-				<input type="text" id="filter_value_<%=idx %>" name="filter_value_<%=idx %>" value="<%= StringEscapeUtils.escapeHtml(filter[2]) %>" size="45"/>
-				<input class="btn btn-default" type="submit" id="submit_filter_remove_<%=idx %>" name="submit_filter_remove_<%=idx %>" value="X" />
+                                <input type="text" class="form-control_search" id="filter_value_<%=idx %>" name="filter_value_<%=idx %>" value="<%= StringEscapeUtils.escapeHtml(filter[2]) %>" size="45"/>
+				<input class="btn  btn-default" style="color:#000000 !important;" type="submit" id="submit_filter_remove_<%=idx %>" name="submit_filter_remove_<%=idx %>" value="X" />
 				<br/>
 				<%
 				idx++;
@@ -250,7 +251,7 @@
 		%>
 		</div>
 <% } %>
-<a class="btn btn-default" href="<%= request.getContextPath()+"/simple-search" %>"><fmt:message key="jsp.search.general.new-search" /></a>	
+<a class="btn btn-default btn_newSerch" href="<%= request.getContextPath()+"/simple-search" %>"><fmt:message key="jsp.search.general.new-search" /></a>	
 		</form>
 		</div>
 <% if (availableFilters.size() > 0) { %>
@@ -274,7 +275,7 @@
 				}
 		} %>
                <label for="filtername" style="text-indent: -5000px;position: absolute">Filtra Por</label>
-		<select id="filtername" name="filtername">
+               <select id="filtername" name="filtername" class="form-control_search">
 		<%
 			for (DiscoverySearchFilter searchFilter : availableFilters)
 			{
@@ -284,7 +285,7 @@
 		%>
 		</select>
                 <label for="filtertype" style="text-indent: -5000px;position: absolute">Criterio de busqueda</label>
-		<select id="filtertype" name="filtertype" id="filtertype">
+                <select id="filtertype" name="filtertype" id="filtertype" class="form-control_search">
 		<%
 			for (String opt : options)
 			{
@@ -294,7 +295,7 @@
 		%>
 		</select>
                 <label for="filterquery" style="text-indent: -5000px;position: absolute">Palabra a buscar</label>
-		<input type="text" id="filterquery" name="filterquery" size="45" required="required" id="filterquery"/>
+                <input type="text" id="filterquery" name="filterquery" size="45" class="form-control_search" required="required" id="filterquery"/>
 		<input type="hidden" value="<%= rpp %>" name="rpp" />
 		<input type="hidden" value="<%= sortedBy %>" name="sort_by" />
 		<input type="hidden" value="<%= order %>" name="order" />
