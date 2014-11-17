@@ -157,7 +157,7 @@
 	    
             <div class="form-group">
                 <label for="tequery"><fmt:message key="jsp.layout.navbar-default.search"/></label>
-                <input tabindex="" type="text" class="keyboard form-control" placeholder="<fmt:message key="jsp.layout.navbar-default.search"/>" name="query" id="tequery" size="25"/>
+                <input tabindex="" type="text" class="keyboard form-control_search" style="width:none;" placeholder="<fmt:message key="jsp.layout.navbar-default.search"/>" name="query" id="tequery" size="25"/>
         </div>
         
         <button tabindex="" type="submit" title="buscar" class="btn btn-primary" value="Buscar" navbar-brand><span class="glyphicon glyphicon-search" role="button" id="btn_search" name="btn_search"></span></button>

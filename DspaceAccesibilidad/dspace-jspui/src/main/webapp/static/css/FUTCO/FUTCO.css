@@ -158,10 +158,12 @@ border-color: #324F69 !important;
     background-image: none;
     background-color: #BDCED6 !important;
     border-color: transparent !important;
-    color:black;
+    color:black !important;
     text-shadow:none !important;
 }
-
+.btn-success:hover,.btn-success:focus {
+    color:black !important;
+}
 .btn-success li,.btn-success a,.btn-success span{
     color: black !important;
     text-shadow:none;
@@ -257,11 +259,25 @@ code {
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 
-.btn-warning{
+.btn-warning,.btn-warning:focus, .btn-warning:hover {
     background-image: none;
     background-repeat: repeat-x;
-    background-color: #FFFF7C;
-    color: #0B0056;
+    background-color: #08006B;
+    color: #ffffff;
     border-color: transparent;
     text-shadow: none;
+}
+
+.form-control_search{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    vertical-align: middle;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
