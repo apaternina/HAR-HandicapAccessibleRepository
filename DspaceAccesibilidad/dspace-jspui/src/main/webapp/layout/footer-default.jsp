@@ -41,7 +41,7 @@
 <!--<a id="saltarContent" style="bottom:82px;" class="sr-only"  href="#content2">Saltar el pié de página</a>-->
             <%-- Page footer --%>
              
-             <footer class="navbar navbar-inverse navbar-bottom">
+             <footer class="navbar navbar-inverse navbar-bottom bar_footer">
                
              <div id="designedby" class="container text-muted">
              <!--<fmt:message key="jsp.layout.footer-default.theme-by"/> <a href="http://www.cineca.it"><img

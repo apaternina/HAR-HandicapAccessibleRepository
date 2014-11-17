@@ -209,6 +209,7 @@
 			{
 			    boolean found = false;
 			    %>
+                            <label for="filter_field_<%=idx %>" style="text-indent: -5000px;position: absolute">Filtra Por</label>
 			    <select id="filter_field_<%=idx %>" name="filter_field_<%=idx %>">
 				<%
 					for (DiscoverySearchFilter searchFilter : availableFilters)
@@ -229,6 +230,7 @@
 					}
 				%>
 				</select>
+                                <label for="filter_type_<%=idx %>" style="text-indent: -5000px;position: absolute">Criterio de busqueda</label>
 				<select id="filter_type_<%=idx %>" name="filter_type_<%=idx %>">
 				<%
 					for (String opt : options)
@@ -238,6 +240,7 @@
 					}
 				%>
 				</select>
+                                <label for="filter_value_<%=idx %>" style="text-indent: -5000px;position: absolute">Palabra a buscar</label>
 				<input type="text" id="filter_value_<%=idx %>" name="filter_value_<%=idx %>" value="<%= StringEscapeUtils.escapeHtml(filter[2]) %>" size="45"/>
 				<input class="btn btn-default" type="submit" id="submit_filter_remove_<%=idx %>" name="submit_filter_remove_<%=idx %>" value="X" />
 				<br/>
@@ -270,6 +273,7 @@
 					idx++;
 				}
 		} %>
+               <label for="filtername" style="text-indent: -5000px;position: absolute">Filtra Por</label>
 		<select id="filtername" name="filtername">
 		<%
 			for (DiscoverySearchFilter searchFilter : availableFilters)
@@ -279,7 +283,8 @@
 			}
 		%>
 		</select>
-		<select id="filtertype" name="filtertype">
+                <label for="filtertype" style="text-indent: -5000px;position: absolute">Criterio de busqueda</label>
+		<select id="filtertype" name="filtertype" id="filtertype">
 		<%
 			for (String opt : options)
 			{
@@ -288,7 +293,8 @@
 			}
 		%>
 		</select>
-		<input type="text" id="filterquery" name="filterquery" size="45" required="required" />
+                <label for="filterquery" style="text-indent: -5000px;position: absolute">Palabra a buscar</label>
+		<input type="text" id="filterquery" name="filterquery" size="45" required="required" id="filterquery"/>
 		<input type="hidden" value="<%= rpp %>" name="rpp" />
 		<input type="hidden" value="<%= sortedBy %>" name="sort_by" />
 		<input type="hidden" value="<%= order %>" name="order" />
@@ -315,7 +321,7 @@
 				}
 	} %>	
            <label for="rpp"><fmt:message key="search.results.perpage"/></label>
-           <select name="rpp">
+           <select name="rpp" id="rpp">
 <%
                for (int i = 5; i <= 100 ; i += 5)
                {
@@ -332,7 +338,7 @@
            {
 %>
                <label for="sort_by"><fmt:message key="search.results.sort-by"/></label>
-               <select name="sort_by">
+               <select name="sort_by" id="sort_by">
                    <option value="score"><fmt:message key="search.sort-by.relevance"/></option>
 <%
                for (String sortBy : sortOptions)
@@ -347,12 +353,12 @@
            }
 %>
            <label for="order"><fmt:message key="search.results.order"/></label>
-           <select name="order">
+           <select name="order" id="order">
                <option value="ASC" <%= ascSelected %>><fmt:message key="search.order.asc" /></option>
                <option value="DESC" <%= descSelected %>><fmt:message key="search.order.desc" /></option>
            </select>
            <label for="etal"><fmt:message key="search.results.etal" /></label>
-           <select name="etal">
+           <select name="etal" id="etal">
 <%
                String unlimitedSelect = "";
                if (etAl < 1)

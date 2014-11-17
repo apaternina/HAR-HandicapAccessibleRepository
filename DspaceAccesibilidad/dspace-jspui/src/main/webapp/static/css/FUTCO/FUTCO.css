@@ -91,6 +91,12 @@ background-color:#F7F7F7 !important;
 border-color: #324F69 !important;
   
 }
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    text-decoration: underline !important;
+    color:#324F69;
+    
+}
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
   background-color:#324F69 !important;
     
@@ -102,9 +108,69 @@ border-color: #324F69 !important;
 }
 
 .navbar-inverse .navbar-nav>li>a{
-    color:#324F69;
+    color:#324F69 ;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover{
-    //font-weight: bold !important;  
+.navbar-inverse .navbar-nav>li>a:focus{
+    text-decoration: underline !important;
+    color:#324F69;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{
+    
+    text-shadow: none;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret{
+    border-top-color: #324F69;
+    border-bottom-color: #324F69;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret:hover{
+    border-top-color: #324F69 !important;
+    border-bottom-color: #324F69 !important;
+}
+
+.banner img{
+    zoom: 60%;
+    //transform: scale(0.9);
+    width: 114%;
+}
+
+.dropdown-header{
+    color: #324F69;
+}
+
+.bar_footer{
+    background-color: #324F69 !important;
+    
+}
+.bar_footer a{
+    color:#FFFFFF !important;
+    
+}
+.text-muted{
+    color:#FFFFFF !important;
+}
+
+.heigthBanner{
+    height: 200px !important;
+    
+}
+.btn-success{
+    background-image: none;
+    background-color: #BDCED6 !important;
+    border-color: black;
+}
+
+.btn-success li,.btn-success a,.btn-success span{
+    color: black !important;
+    text-shadow:none;
+    
+}
+.panel-primary>.panel-heading{
+    background-color: #003366;
+    background-image: none;
+    
+}
+
+.panel-body{
+   // background-color: #EDF1FF;
 }

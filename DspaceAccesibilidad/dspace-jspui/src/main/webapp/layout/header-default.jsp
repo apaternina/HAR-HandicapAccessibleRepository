@@ -167,10 +167,10 @@
 <div  id ="content2" class="container banner">
 	<div class="row">
 		<div class="col-md-9 brand">
-                    <h1 id="pagePrincipal"><fmt:message key="jsp.layout.header-default.brand.heading" /></h1>
+                    <h1 id="pagePrincipal"><fmt:message key="jsp.layout.header-default.brand.heading-FUTCO" /></h1>
         <fmt:message key="jsp.layout.header-default.brand.description-FUTCO" />
         </div>
-        <div class="col-md-3"><img class="pull-right" src="<%= request.getContextPath() %>/image/logo.gif" >
+        <div class="col-md-3"><img class="pull-right" src="<%= request.getContextPath() %>/image/FUTCO/futco.png" alt="" >
         </div>
 	</div>
 </div>	
