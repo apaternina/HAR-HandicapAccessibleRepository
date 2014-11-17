@@ -81,7 +81,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-           <a tabindex="" id="logo" class="navbar-brand" href="<%= request.getContextPath() %>/"><img height="25px" src="<%= request.getContextPath() %>/image/dspace-logo-only.png" alt=""/></a><!--<fmt:message key="jsp.layout.navbar-alt-logo"/> -->
+           <a tabindex="" id="logo" class="navbar-brand" href="<%= request.getContextPath() %>/"><img class="tamañoLogo" src="<%= request.getContextPath() %>/image/FUTCO/LOGOFITCO_trans.png" alt=""/></a><!--<fmt:message key="jsp.layout.navbar-alt-logo"/> -->
        </div>
        <nav class="collapse navbar-collapse bs-navbar-collapse" role="menubar">
          <ul class="nav navbar-nav">

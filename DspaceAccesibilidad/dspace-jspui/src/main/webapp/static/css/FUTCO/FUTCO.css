@@ -70,3 +70,41 @@ a[id="saltarContent"]:focus{
 }
 
 
+/*
+
+
+
+*/
+
+.navbar-brand{
+    padding: 5px 15px !important;
+}
+
+.tamañoLogo{
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.navbar-inverse{
+background-image:none !important;
+background-color:#F7F7F7 !important;
+border-color: #324F69 !important;
+  
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+  background-color:#324F69 !important;
+    
+}
+
+
+.navbar-inverse .navbar-nav>.active>a{
+    background-color:#324F69 !important;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color:#324F69;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    //font-weight: bold !important;  
+}

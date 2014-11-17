@@ -39,6 +39,7 @@
 <%@ page import="org.dspace.core.LogManager" %>
 <%@ page import="org.dspace.core.PluginManager" %>
 <%@ page import="org.dspace.plugin.SiteHomeProcessor" %>
+
 <link rel="shortcut icon" href="<%= request.getContextPath() %>/images/FUTCO/favicon.ico">
 <%
     Context context = null;
