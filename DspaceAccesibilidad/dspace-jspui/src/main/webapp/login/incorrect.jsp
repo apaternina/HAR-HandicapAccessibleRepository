@@ -41,7 +41,7 @@
 
                 <!--<a id="a_mensaje" tabindex="8"></a>-->
     <%-- <p align="center"><strong>The e-mail address and password you supplied were not valid.  Please try again, or have you <a href="<%= request.getContextPath() %>/forgot">forgotten your password</a>?</strong></p> --%>
-    <p id="p_mensaje" style="display:none;"><strong><fmt:message key="jsp.login.incorrect.text">
+    <p id="p_mensaje" ><strong><fmt:message key="jsp.login.incorrect.text">
         <fmt:param><%= request.getContextPath() %>/forgot</fmt:param>
     </fmt:message></strong></p>
 

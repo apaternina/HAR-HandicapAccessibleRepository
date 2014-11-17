@@ -156,7 +156,7 @@
 	<form method="get" action="<%= request.getContextPath() %>/simple-search" class="navbar-form navbar-right" scope="search">
 	    
             <div class="form-group">
-                <label style="display:none;" for="tequery"><fmt:message key="jsp.layout.navbar-default.search"/></label>
+                <label for="tequery"><fmt:message key="jsp.layout.navbar-default.search"/></label>
                 <input tabindex="" type="text" class="keyboard form-control" placeholder="<fmt:message key="jsp.layout.navbar-default.search"/>" name="query" id="tequery" size="25"/>
         </div>
         

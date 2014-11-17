@@ -33,7 +33,7 @@
     SubmissionInfo subInfo = SubmissionController.getSubmissionInfo(context, request);
 %>
 <script>
-    alert();
+    
     
 </script>
 

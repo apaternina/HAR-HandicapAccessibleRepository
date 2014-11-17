@@ -125,7 +125,7 @@
 		    }
     %>
     <script  type="text/javascript">
-       mostraAlerta();
+      // mostraAlerta();
         
     </script>
 
