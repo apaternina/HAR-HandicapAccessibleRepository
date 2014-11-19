@@ -21,7 +21,7 @@ a[id="saltarContent"]:focus{
     width: 150px !important;
     color: white !important;
     height: 20px !important;
-    background-color: #ba2710 !important;
+    background-color: #800000 !important;
     position: fixed !important;
     text-indent:0px !important;
     clip: initial;
@@ -157,7 +157,9 @@ border-color: #324F69 !important;
 .btn-success{
     background-image: none;
     background-color: #BDCED6 !important;
-    border-color: black;
+    border-color: transparent !important;
+    color:black;
+    text-shadow:none !important;
 }
 
 .btn-success li,.btn-success a,.btn-success span{
@@ -173,4 +175,43 @@ border-color: #324F69 !important;
 
 .panel-body{
    // background-color: #EDF1FF;
+}
+
+.btn-info{
+    background-color: #BDCED6 !important;
+    color: #000 !important;
+    border-color: transparent !important;
+    text-shadow: none !important;
+    background-image:none !important;
+}
+
+
+div.panel-heading a {
+    color:white !important;
+    
+}
+
+.navbar-inverse .navbar-nav > li > a:focus{
+   // color:white !important; 
+    
+}
+
+.btn-success:hover{
+    color:black !important;
+}
+
+.btn-primary{
+    background-image:none;
+    background-repeat: repeat-x;
+    background-color: #BDCED6 !important;
+    color: black !important;
+    border-color: transparent !important;
+    text-shadow: none !important;
+    
+}
+
+.alert-warning{
+    background-image: none;
+    background-color: #800000;
+    color: #FFFFFF !important;
 }
