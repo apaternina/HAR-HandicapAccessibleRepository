@@ -308,10 +308,10 @@
          }
          
          sb.append("<span class=\"col-md-5\"><input id='input_Author' placeholder=\"" )
-           //.append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.lastname")))
-           .append("Apellidos del autor, Ejemplo: <strong>García</strong> ")
+           .append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.lastname")))
+           //.append("Apellidos del autor, Ejemplo: <strong>García</strong> ")
            .append("\" class=\"form-control\" type=\"text\" name=\"")
-           //.append(last.toString()) 
+           .append(last.toString()) 
            .append("\" size=\"23\" ");
          if (readonly)
          {
@@ -320,8 +320,8 @@
          sb.append("value=\"")
            .append(dpn.getLastName().replaceAll("\"", "&quot;")) // Encode "
                   .append("\"/></span><span class=\"col-md-5\"><input placeholder=\"")
-                   //.append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.firstname")))
-                  .append("Nombres del Autor, Ejemplo: <strong>Pedro J.</strong> ")
+                  .append(Utils.addEntities(LocaleSupport.getLocalizedMessage(pageContext, "jsp.submit.edit-metadata.firstname")))
+                  //.append("Nombres del Autor, Ejemplo: <strong>Pedro J.</strong> ")
                    .append("\" class=\"form-control\" type=\"text\" name=\"")
                    .append(first.toString())
            .append("\" size=\"23\" ");
@@ -1237,9 +1237,9 @@
         contextPath = request.getContextPath();
 %>
 
+<form action="<%= request.getContextPath() %>/submit#<%= si.getJumpToField()%>" method="post" name="edit_metadata" id="edit_metadata"  >
+<!--<form action="<%= request.getContextPath() %>/submit#<%= si.getJumpToField()%>" method="post" name="edit_metadata" id="edit_metadata" onkeydown="return disableEnterKey(event);">-->
 
-
-  <form action="<%= request.getContextPath() %>/submit#<%= si.getJumpToField()%>" method="post" name="edit_metadata" id="edit_metadata" onkeydown="return disableEnterKey(event);">
 
         <jsp:include page="/submit/progressbar.jsp"></jsp:include>
 

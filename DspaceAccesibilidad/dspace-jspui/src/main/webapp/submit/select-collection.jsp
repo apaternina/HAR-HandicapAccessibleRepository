@@ -57,7 +57,8 @@
 %>
 	<p><fmt:message key="jsp.submit.select-collection.info1"/></p>
 
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <!--<form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">-->
+        <form action="<%= request.getContextPath() %>/submit" method="post">
 <%
 		//if no collection was selected, display an error
 		if((noCollection != null) && (noCollection.booleanValue()==true))
