@@ -55,7 +55,9 @@
 
 <dspace:layout style="submission" locbar="off" navbar="off" titlekey="jsp.submit.get-file-format.title" nocache="true">
 
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <!--<form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">-->
+    <form action="<%= request.getContextPath() %>/submit" method="post">
+        
 
         <jsp:include page="/submit/progressbar.jsp"/>
 
@@ -96,7 +98,8 @@
     </form>
 
 <%-- Option list put in a separate form --%>
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <!--<form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">-->
+        <form action="<%= request.getContextPath() %>/submit" method="post">
 <%
     }
 %>

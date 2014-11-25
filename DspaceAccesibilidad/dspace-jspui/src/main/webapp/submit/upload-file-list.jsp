@@ -80,8 +80,8 @@
         </script>
 <dspace:layout style="submission" locbar="off" navbar="off" titlekey="jsp.submit.upload-file-list.title">
 
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
-
+<!--    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">-->
+<form action="<%= request.getContextPath() %>/submit" method="post">
         <jsp:include page="/submit/progressbar.jsp"/>
 
 <%--        <h1>Submit: <%= (justUploaded ? "File Uploaded Successfully" : "Uploaded Files") %></h1> --%>

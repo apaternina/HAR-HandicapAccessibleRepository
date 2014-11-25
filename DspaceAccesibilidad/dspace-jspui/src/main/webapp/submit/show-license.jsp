@@ -46,7 +46,7 @@
                titlekey="jsp.submit.show-license.title"
                nocache="true">
 
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <form action="<%= request.getContextPath() %>/submit" method="post">
 
         <jsp:include page="/submit/progressbar.jsp"/>
 

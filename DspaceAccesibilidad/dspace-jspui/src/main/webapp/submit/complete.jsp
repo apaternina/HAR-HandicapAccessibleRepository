@@ -57,7 +57,8 @@
      
     <p><a href="<%= request.getContextPath() %>/community-list"><fmt:message key="jsp.community-list.title"/></a></p>
      
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <!--<form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">-->
+    <form action="<%= request.getContextPath() %>/submit" method="post" >
         <input type="hidden" name="collection" value="<%= collection.getID() %>"/>
 	    <input class="btn btn-success pull-right" type="submit" name="submit" value="<fmt:message key="jsp.submit.complete.again"/>"/>
     </form>

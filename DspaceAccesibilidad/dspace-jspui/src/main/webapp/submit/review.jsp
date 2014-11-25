@@ -56,7 +56,7 @@
     </script>
 <dspace:layout locbar="off" navbar="off" titlekey="jsp.submit.review.title" style="submission" nocache="true">
 
-    <form action="<%= request.getContextPath() %>/submit" method="post" onkeydown="return disableEnterKey(event);">
+    <form action="<%= request.getContextPath() %>/submit" method="post" >
    
         <jsp:include page="/submit/progressbar.jsp" />
 

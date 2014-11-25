@@ -323,9 +323,12 @@
     </form>
     <iframe id="uploadFormIFrame" name="uploadFormIFrame" style="display: none"> </iframe>
 <% } %>
-    <form id="uploadForm" <%= bSherpa?"class=\"sherpa col-md-8\"":"" %> method="post" 
+   <!-- <form id="uploadForm" <%= bSherpa?"class=\"sherpa col-md-8\"":"" %> method="post" 
     	action="<%= request.getContextPath() %>/submit" enctype="multipart/form-data" 
-    	onkeydown="return disableEnterKey(event);">
+    	onkeydown="return disableEnterKey(event);">-->
+ <form id="uploadForm" <%= bSherpa?"class=\"sherpa col-md-8\"":"" %> method="post" 
+    	action="<%= request.getContextPath() %>/submit" enctype="multipart/form-data" 
+    	>
 
 		<jsp:include page="/submit/progressbar.jsp"/>
 		
