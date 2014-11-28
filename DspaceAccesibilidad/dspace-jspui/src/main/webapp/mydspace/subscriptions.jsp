@@ -37,7 +37,9 @@
     boolean updated =
         ((Boolean) request.getAttribute("updated")).booleanValue();
 %>
-
+<script>
+    quitarNoScript(); 
+</script>
 <dspace:layout style="submission" locbar="link"
                parentlink="/mydspace"
                parenttitlekey="jsp.mydspace"
@@ -59,7 +61,7 @@
         <form class="form-group" action="<%= request.getContextPath() %>/subscribe" method="post">
         	<div class="col-md-6">
             <select id="available-subscriptions" class="form-control" name="collection">
-                <option value="-1"><fmt:message key="jsp.mydspace.subscriptions.select_collection" /></option>
+                <option value="-1"><fmt:message key="jsp.mydspace.subscriptions.select_collection_es" /></option>
 <%
     for (int i = 0; i < availableSubscriptions.length; i++)
     {

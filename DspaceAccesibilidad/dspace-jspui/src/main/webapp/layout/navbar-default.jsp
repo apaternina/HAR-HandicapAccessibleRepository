@@ -72,6 +72,7 @@
 %>
  <script  type="text/javascript">
            quitarNoScriptNavbar();
+           quitarNoScript();
     </script>
        <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

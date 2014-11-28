@@ -27,6 +27,10 @@
 <%@ taglib uri="http://www.dspace.org/dspace-tags.tld" prefix="dspace" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+ <script  type="text/javascript">
+           quitarNoScriptNavbar();
+           quitarNoScript();
+    </script>
 <%
 	// Is anyone logged in?
 	EPerson user = (EPerson) request.getAttribute("dspace.current.user");
@@ -54,15 +58,15 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="<%= request.getContextPath() %>/"><img height="25px" src="<%= request.getContextPath() %>/image/dspace-logo-only.png" /></a>
+           <a class="navbar-brand" href="<%= request.getContextPath() %>/"><img height="25px" class="tamañoLogo" src="<%= request.getContextPath() %>/image/FUTCO/LOGOFITCO_trans.png" /></a>
        </div>
-       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+       <nav class="collapse navbar-collapse bs-navbar-collapse" role="menubar">
          <ul class="nav navbar-nav">
-           <li><a href="<%= request.getContextPath() %>/"><span class="glyphicon glyphicon-home"></span> <fmt:message key="jsp.layout.navbar-default.home"/></a></li>
+           <li><a href="<%= request.getContextPath() %>/"><span class="glyphicon glyphicon-home" accesskey="1"></span> <fmt:message key="jsp.layout.navbar-default.home"/></a></li>
            
-          <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.contents"/> <b class="caret"></b></a>
-             <ul class="dropdown-menu">
+          <li class="dropdown" role="menuitem"  >
+             <a href="#" class="dropdown-toggle"  accesskey="2" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.contents"/> <b class="caret"></b></a>
+             <ul class="dropdown-menu" role="menu">
                <li><a href="<%= request.getContextPath() %>/tools/edit-communities"><fmt:message key="jsp.layout.navbar-admin.communities-collections"/></a></li>
                <li class="divider"></li>
                <li><a href="<%= request.getContextPath() %>/tools/edit-item"><fmt:message key="jsp.layout.navbar-admin.items"/></a></li>
@@ -76,18 +80,18 @@
             </ul>
           </li>
                           
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.accesscontrol"/> <b class="caret"></b></a>
-             <ul class="dropdown-menu">
+           <li class="dropdown" role="menuitem">
+             <a href="#" class="dropdown-toggle" accesskey="3" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.accesscontrol"/> <b class="caret"></b></a>
+             <ul class="dropdown-menu" role="menu">
                <li><a href="<%= request.getContextPath() %>/dspace-admin/edit-epeople"><fmt:message key="jsp.layout.navbar-admin.epeople"/></a></li>
                <li><a href="<%= request.getContextPath() %>/tools/group-edit"><fmt:message key="jsp.layout.navbar-admin.groups"/></a></li>
                <li><a href="<%= request.getContextPath() %>/tools/authorize"><fmt:message key="jsp.layout.navbar-admin.authorization"/></a></li>
             </ul>
           </li>
-          <li><a href="<%= request.getContextPath() %>/statistics"><fmt:message key="jsp.layout.navbar-admin.statistics"/></a></li>
-		  <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.settings"/> <b class="caret"></b></a>
-             <ul class="dropdown-menu">
+          <li><a accesskey="4" href="<%= request.getContextPath() %>/statistics"><fmt:message key="jsp.layout.navbar-admin.statistics"/></a></li>
+		  <li class="dropdown" role="menuitem">
+             <a href="#" accesskey="5" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-admin.settings"/> <b class="caret"></b></a>
+             <ul class="dropdown-menu" role="menu">
                <li><a href="<%= request.getContextPath() %>/dspace-admin/metadata-schema-registry"><fmt:message key="jsp.layout.navbar-admin.metadataregistry"/></a></li>
                <li><a href="<%= request.getContextPath() %>/dspace-admin/format-registry"><fmt:message key="jsp.layout.navbar-admin.formatregistry"/></a></li>
                <li class="divider"></li>
@@ -96,13 +100,13 @@
                <li><a href="<%= request.getContextPath() %>/dspace-admin/license-edit"><fmt:message key="jsp.layout.navbar-admin.editlicense"/></a></li>
             </ul>
           </li>          
-          <li class="<%= ( currentPage.endsWith( "/help" ) ? "active" : "" ) %>"><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") %>"><fmt:message key="jsp.layout.navbar-admin.help"/></dspace:popup></li>
+          <li accesskey="6" class="<%= ( currentPage.endsWith( "/help" ) ? "active" : "" ) %>"><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") %>"><fmt:message key="jsp.layout.navbar-admin.help"/></dspace:popup></li>
        </ul>
        <div class="nav navbar-nav navbar-right">
 		<ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
+         <li class="dropdown" role="menuitem">
 
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.loggedin">
+		<a href="#" accesskey="7" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.loggedin">
 		      <fmt:param><%= StringUtils.abbreviate(navbarEmail, 20) %></fmt:param>
 		  </fmt:message> <b class="caret"></b></a>
 		<ul class="dropdown-menu">

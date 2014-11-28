@@ -1032,7 +1032,7 @@
       String display, value;
       int j;
       String id_field="";
- if(label.equals("Type")){id_field="select_tipo";}else if(label.equals("Language")){id_field="select_lenguaje";}
+ if(label.equals("Type")){label="Tipo";id_field="select_tipo";}else if(label.equals("Language")){label="Lenguaje";id_field="select_lenguaje";}
       sb.append("<div class=\"row\"><label for='"+id_field+"' class=\"col-md-2"+ (required?" label-required":"") +"\">"); 
         sb.append(label)
         .append("</label>");

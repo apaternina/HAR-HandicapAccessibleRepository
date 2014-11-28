@@ -136,7 +136,7 @@
     				$('#selectedFile').remove();
     				$('<input type="file" name="file" id="tfile">').appendTo(parent);
                     $('#tfile').wrap('<span id="spanFile" class="fileinput-button btn btn-success col-md-2"></span>');
-                    $('#spanFile').prepend('&nbsp;&nbsp;<fmt:message key="jsp.submit.choose-file.upload-ajax.button.select-file"/>');
+                    $('#spanFile').prepend('&nbsp;&nbsp;<fmt:message key="jsp.submit.choose-file.upload-ajax.button.select-file_es"/>');
                     $('#spanFile').prepend('<span class="glyphicon glyphicon-folder-open"></span>');
                    	$('#tfile').on('change', function(){
     		    		 decorateFileInputChangeEvent($);
@@ -155,7 +155,7 @@
    		progressbarArea.hide();
 
         $('#tfile').wrap('<span id="spanFile" class="fileinput-button btn btn-success col-md-2"></span>');
-        $('#spanFile').prepend('&nbsp;&nbsp;<fmt:message key="jsp.submit.choose-file.upload-ajax.button.select-file"/>');
+        $('#spanFile').prepend('&nbsp;&nbsp;<fmt:message key="jsp.submit.choose-file.upload-ajax.button.select-file_es"/>');
         $('#spanFile').prepend('<span class="glyphicon glyphicon-folder-open"></span>');
         $('#tfile').on('change', function(){
             decorateFileInputChangeEvent($);

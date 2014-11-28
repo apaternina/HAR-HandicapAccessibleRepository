@@ -123,28 +123,28 @@
      =========================================================== --%>
             <div class="row">    
                 <label for="name" class="col-md-3"><fmt:message key="jsp.tools.edit-community.form.label1"/></label>
-                <span class="col-md-9"><input class="form-control" type="text" name="name" value="<%= Utils.addEntities(name) %>" size="50" /></span>
+                <span class="col-md-9"><input class="form-control" type="text" name="name" id="name" value="<%= Utils.addEntities(name) %>" size="50" /></span>
             </div><br/>
             <div class="row">
                 <label for="short_description" class="col-md-3"><fmt:message key="jsp.tools.edit-community.form.label2"/></label>
-                <span class="col-md-9"><input class="form-control" type="text" name="short_description" value="<%= Utils.addEntities(shortDesc) %>" size="50" />
+                <span class="col-md-9"><input class="form-control" id="short_description" type="text" name="short_description" value="<%= Utils.addEntities(shortDesc) %>" size="50" />
                 </span>
             </div><br/>
             <div class="row">
                 <label class="col-md-3" for="introductory_text"><fmt:message key="jsp.tools.edit-community.form.label3"/></label>
-                <span class="col-md-9"><textarea class="form-control" name="introductory_text" rows="6" cols="50"><%= Utils.addEntities(intro) %></textarea>
+                <span class="col-md-9"><textarea class="form-control" id="introductory_text" name="introductory_text" rows="6" cols="50"><%= Utils.addEntities(intro) %></textarea>
                 </span>
             </div><br/>
             <div class="row">
                 <label class="col-md-3" for="copyright_text"><fmt:message key="jsp.tools.edit-community.form.label4"/></label>
                 <span class="col-md-9">
-                    <textarea class="form-control" name="copyright_text" rows="6" cols="50"><%= Utils.addEntities(copy) %></textarea>
+                    <textarea class="form-control" name="copyright_text" id="copyright_text" rows="6" cols="50"><%= Utils.addEntities(copy) %></textarea>
                 </span>
             </div><br/>
             <div class="row">
                 <label class="col-md-3"><fmt:message key="jsp.tools.edit-community.form.label5"/></label>
                 <span class="col-md-9">
-                    <textarea class="form-control" name="side_bar_text" rows="6" cols="50"><%= Utils.addEntities(side) %></textarea>
+                    <textarea class="form-control" name="side_bar_text" id="side_bar_text" rows="6" cols="50"><%= Utils.addEntities(side) %></textarea>
                 </span>
             </div><br/>
 <%-- ===========================================================

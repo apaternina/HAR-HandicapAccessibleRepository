@@ -42,7 +42,7 @@
     <%-- <p><strong>The ID you entered isn't a valid item ID.</strong>  If you're trying to
     edit a community or collection, you need to use the --%>
     <%-- <a href="<%= request.getContextPath() %>/dspace-admin/edit-communities">communities/collections admin page.</a></p> --%>
-	<p class="alert alert-warning"><fmt:message key="jsp.tools.get-item-id.info1">
+	<p class="alert alert-warning" style="color:white !important;" ><fmt:message key="jsp.tools.get-item-id.info1">
         <fmt:param><%= request.getContextPath() %>/dspace-admin/edit-communities</fmt:param>
     </fmt:message></p>
 <%  } %>
@@ -60,7 +60,7 @@
 			<input class="btn btn-default" type="submit" name="submit" value="<fmt:message key="jsp.tools.get-item-id.find.button"/>" />
 		</div>
 		<div class="row">
-			<label class="col-md-2" for="thandle"><fmt:message key="jsp.tools.get-item-id.internal"/></label>
+			<label class="col-md-2" for="titem_id"><fmt:message key="jsp.tools.get-item-id.internal"/></label>
             <span class="col-md-3"><input class="form-control" type="text" name="item_id" id="titem_id" size="12"/></span>
 			<%-- <input type="submit" name="submit" value="Find"> --%>
 			<input class="btn btn-default" type="submit" name="submit" value="<fmt:message key="jsp.tools.get-item-id.find.button"/>" />
