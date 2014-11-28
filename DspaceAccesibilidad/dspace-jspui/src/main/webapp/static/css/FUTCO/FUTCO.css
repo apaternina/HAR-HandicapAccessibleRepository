@@ -217,6 +217,11 @@ div.panel-heading a {
     background-color: #800000;
     color: #FFFFFF !important;
 }
+.dropdown-menualert-danger{
+    background-image: none !important;
+    background-color: #800000;
+    color: #FFFFFF !important;
+}
 
 .alert-warning a{
     color: #FFFFFF !important;
@@ -284,4 +289,20 @@ code {
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background-color: #324F69 !important;
+    background-image:none !important;
+    box-shadow:none;
+    border-color:  #324F69 !important;
+    border: 0px !important;
+}
+
+.list-group-item-heading a{
+    color: #000080 !important;
+}
+
+.brand h4{
+    color:#505050 !important;
 }

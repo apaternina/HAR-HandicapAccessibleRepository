@@ -100,15 +100,15 @@ if (error!=null) {
          </p>
          <div class="input-group col-md-6">
 	     	<div class="input-group-addon">
-		 		<span class="col-md-2"><fmt:message key="jsp.dspace-admin.list-metadata-schemas.namespace"/>:</span>
+                    <label class="col-md-2" for="namespace" style="font-weight: normal;padding: 0px;margin: 0px;"><fmt:message key="jsp.dspace-admin.list-metadata-schemas.namespace"/>:</label>
 		 	</div>
-          	<input class="form-control" type="text" name="namespace" value=""/>
+          	<input class="form-control" type="text" id="namespace" name="namespace" value=""/>
 		</div>
        <div class="input-group col-md-6">
        		<div class="input-group-addon">
-       			<span class="col-md-2"><fmt:message key="jsp.dspace-admin.list-metadata-schemas.name"/>:</span>
+       			<label class="col-md-2" for="short_name" style="font-weight: normal;padding: 0px;margin: 0px;"><fmt:message key="jsp.dspace-admin.list-metadata-schemas.name"/>:</label>
     	   </div>			
-       		<input class="form-control" type="text" name="short_name" value=""/>
+       		<input class="form-control" type="text"  id="short_name" name="short_name" value=""/>
 	    </div>
         <br/><br/><br/>
        <div class="row col-md-offset-5">

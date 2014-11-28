@@ -251,13 +251,13 @@
 		%>
 		</div>
 <% } %>
-<a class="btn btn-default btn_newSerch" href="<%= request.getContextPath()+"/simple-search" %>"><fmt:message key="jsp.search.general.new-search" /></a>	
+<a class="btn btn-default btn_newSerch" href="<%= request.getContextPath()+"/simple-search" %>"><fmt:message key="jsp.search.general.new-search_es" /></a>	
 		</form>
 		</div>
 <% if (availableFilters.size() > 0) { %>
 		<div class="discovery-search-filters panel-body">
-		<h5><fmt:message key="jsp.search.filter.heading" /></h5>
-		<p class="discovery-search-filters-hint"><fmt:message key="jsp.search.filter.hint" /></p>
+		<h5><fmt:message key="jsp.search.filter.heading_es" /></h5>
+		<p class="discovery-search-filters-hint"><fmt:message key="jsp.search.filter.hint_es" /></p>
 		<form action="simple-search" method="get">
 		<input type="hidden" value="<%= StringEscapeUtils.escapeHtml(searchScope) %>" name="location" />
 		<input type="hidden" value="<%= StringEscapeUtils.escapeHtml(query) %>" name="query" />
