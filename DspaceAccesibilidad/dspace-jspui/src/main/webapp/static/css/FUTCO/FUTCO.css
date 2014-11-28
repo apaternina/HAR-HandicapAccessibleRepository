@@ -306,3 +306,23 @@ code {
 .brand h4{
     color:#505050 !important;
 }
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret:hover{
+    border-top-color: #324F69 !important;
+    border-bottom-color: #324F69 !important;
+    color:#324F69 !important;
+}
+
+.dropdown-toggle b{
+    border-top-color: #324F69 !important;
+    border-bottom-color: #324F69 !important;
+    color:#324F69 !important;
+    
+}
+
+.media-body a{
+   color: #000080 !important;   
+}
+a {
+color: #000080;
+}
