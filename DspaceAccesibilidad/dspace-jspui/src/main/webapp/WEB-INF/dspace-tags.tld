@@ -108,6 +108,20 @@
       <required>false</required>
       <rtexprvalue>true</rtexprvalue>
     </attribute>
+    
+    <!-- -->
+    <attribute>
+      <name>scriptfutco</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+     <attribute>
+      <name>cssfutco</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    
+    
   </tag>
 
   <tag>

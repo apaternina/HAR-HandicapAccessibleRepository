@@ -115,6 +115,18 @@ public class LayoutTag extends BodyTagSupport
 
     private String templatePath;
     
+    
+    /* adicion de css y scripts*/
+    private String scriptfutco;
+ 
+   
+ 
+    /** jquery flag **/
+    private String cssfutco;
+ 
+    
+    /* */
+    
     public LayoutTag()
     {
         super();
@@ -134,7 +146,21 @@ public class LayoutTag extends BodyTagSupport
     {
         ServletRequest request = pageContext.getRequest();
        
-        // Sort out location bar
+/*  */
+    if (getScriptfutco() != null)
+        {
+            request.setAttribute("dspace.layout.scriptfutco", getScriptfutco());
+        }
+        if (getCssfutco() != null)
+        {
+            request.setAttribute("dspace.layout.cssfutco", getCssfutco());
+        }    
+/*  */
+        
+
+
+
+// Sort out location bar
         if (locbar == null)
         {
             locbar = "auto";
@@ -648,5 +674,33 @@ public class LayoutTag extends BodyTagSupport
     public void setFeedData(String v)
     {
         this.feedData = v;
+    }
+
+    /**
+     * @return the scriptfutco
+     */
+    public String getScriptfutco() {
+        return scriptfutco;
+    }
+
+    /**
+     * @param scriptfutco the scriptfutco to set
+     */
+    public void setScriptfutco(String scriptfutco) {
+        this.scriptfutco = scriptfutco;
+    }
+
+    /**
+     * @return the cssfutco
+     */
+    public String getCssfutco() {
+        return cssfutco;
+    }
+
+    /**
+     * @param cssfutco the cssfutco to set
+     */
+    public void setCssfutco(String cssfutco) {
+        this.cssfutco = cssfutco;
     }
 }

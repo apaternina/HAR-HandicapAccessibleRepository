@@ -58,7 +58,7 @@
     RecentSubmissions submissions = (RecentSubmissions) request.getAttribute("recent.submissions");
 %>
 
-<dspace:layout locbar="nolink" titlekey="jsp.home.title" feedData="<%= feedData %>">
+<dspace:layout locbar="nolink" titlekey="jsp.home.title" feedData="<%= feedData %>"  scriptfutco="on" cssfutco="on">
 
 <% if (supportedLocales != null && supportedLocales.length > 1)
 {
