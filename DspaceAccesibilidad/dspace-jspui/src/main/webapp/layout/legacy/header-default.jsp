@@ -30,6 +30,10 @@
     boolean locbar = ((Boolean) request.getAttribute("dspace.layout.locbar")).booleanValue();
 
     String siteName = ConfigurationManager.getProperty("dspace.name");
+    
+    String scriptfutco = (String) request.getAttribute("dspace.layout.scriptfutco");    //Added code
+    String cssfutco = (String) request.getAttribute("dspace.layout.cssfutco");                  //Added code
+    
     String feedRef = (String)request.getAttribute("dspace.layout.feedref");
     boolean osLink = ConfigurationManager.getBooleanProperty("websvc.opensearch.autolink");
     String osCtx = ConfigurationManager.getProperty("websvc.opensearch.svccontext");
@@ -75,7 +79,20 @@
         { %>
 <%= extraHeadData %>
 <%
-        }
+          }
+ 
+    if (scriptfutco == null || scriptfutco.equals("on"))           //Added code starts here
+       {
+%>
+     <script type='text/javascript' src='<%= request.getContextPath() %>/static/js/FUTCO.js'></script>
+<%      }
+     if (cssfutco == null || cssfutco.equals("on"))
+    {
+%>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/FUTCO/FUTCO.css" type="text/css" />
+
+<%
+    }                                                                 //Added code ends here
 %>
         
 	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/jquery/jquery-1.10.2.min.js'></script>

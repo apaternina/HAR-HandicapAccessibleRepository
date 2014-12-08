@@ -88,7 +88,7 @@
 %>
      <script type='text/javascript' src='<%= request.getContextPath() %>/static/js/FUTCO.js'></script>
 <%      }
-    if (cssfutco != null && cssfutco.equals("on"))
+    if (cssfutco == null || cssfutco.equals("on"))
     {
 %>
     <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/FUTCO/FUTCO.css" type="text/css" />
