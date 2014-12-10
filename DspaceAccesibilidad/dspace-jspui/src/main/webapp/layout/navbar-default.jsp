@@ -71,8 +71,7 @@
     }
 %>
  <script  type="text/javascript">
-           quitarNoScriptNavbar();
-           quitarNoScript();
+
     </script>
        <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -130,7 +129,7 @@
 		<%
     } else {
 		%>
-             <a accesskey="5"  tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b></a>
+             <a accesskey="4"  tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b></a>
 	<% } %>             
              <ul   class="dropdown-menu" tabindex="" accesskey="5" role="navigation">
                <li role="menuitem"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.layout.navbar-default.users"/></a></li>

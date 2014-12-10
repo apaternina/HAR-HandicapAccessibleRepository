@@ -685,10 +685,10 @@
       if (fieldCount == 0)
          fieldCount = 1;
       
-      if(label.equals("Publisher")){id_field="dc_publisher";}
-        else if(label.equals("Other Titles")){id_field="dc_title_alternative";}
-        else if(label.equals("Citation")){id_field="dc_identifier_citation";}
-        else if(label.equals("Title")){id_field="dc_title";}
+      if(label.equals("Publisher") || label.equals("Editor")){id_field="dc_publisher";}
+        else if(label.equals("Other Titles") || label.equals("Otros títulos")){id_field="dc_title_alternative";}
+        else if(label.equals("Citation") || label.equals("Citación")){id_field="dc_identifier_citation";}
+        else if(label.equals("Título") || label.equals("Title")){id_field="dc_title";}
       
       sb.append("<div class=\"row\"><label for='"+id_field+"' class=\"col-md-2"+ (required?" label-required":"") +"\">");
         sb.append(label)

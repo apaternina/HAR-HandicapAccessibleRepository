@@ -11,8 +11,10 @@
 function quitarNoScriptNavbar(){
     try {
         $(function(){
-            $("#li_popupAyuda a").attr('tabindex','');    
-            $("#li_popupAyuda noscript").html('');
+            if($("#li_popupAyuda a")!=null){
+             $("#li_popupAyuda a").attr('tabindex','');      
+             $("#li_popupAyuda noscript").html('');
+            }
 	});
     } catch (e) {
      //   alert('¡Ha ocurrido un error en la función quitarNoScript '+e.message);
@@ -26,8 +28,12 @@ function quitarNoScriptNavbar(){
 function quitarNoScript(){
     try {
         $(function(){
-            $("noscript").html('');
-            $("noscript").text('');
+            var sNoscripts = $("noscript");
+            for (var i = 0; i < sNoscripts.length; i++) {
+                sNoscripts[i].innerHTML='';
+                sNoscripts[i].innerText='';
+            }
+           
 	});
     } catch (e) {
      //   alert('¡Ha ocurrido un error en la función quitarNoScript '+e.message);

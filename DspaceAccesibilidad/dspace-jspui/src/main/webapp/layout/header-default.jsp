@@ -112,11 +112,6 @@
     Autor : Antonio Paternina
     Descripción : Se se agregan los script y los css para el teclado virtual y la hoja de estilo general de la apliccacion.
     -->
-    
-    
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/keyboard/keyboard.css" type="text/css" />
-    <script type='text/javascript' src="<%= request.getContextPath() %>/static/js/keyboard/jquery.keyboard.js"></script>
-    <script  type='text/javascript' src="<%= request.getContextPath() %>/static/js/keyboard/jquery.mousewheel.js"></script> 
 
     <%--Gooogle Analytics recording.--%>
     <%
@@ -143,8 +138,8 @@
 		    }
     %>
     <script  type="text/javascript">
-      // mostraAlerta();
-        
+             quitarNoScriptNavbar();
+             quitarNoScript();
     </script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

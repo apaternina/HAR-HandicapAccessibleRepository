@@ -128,7 +128,10 @@
 		<%
 		    }
     %>
-
+    <script  type="text/javascript">
+             quitarNoScriptNavbar();
+             quitarNoScript();
+    </script>
     </head>
 
     <%-- HACK: leftmargin, topmargin: for non-CSS compliant Microsoft IE browser --%>
