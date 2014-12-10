@@ -259,7 +259,7 @@
 %>
         <tr>
             <td class="<%= row %>RowOddCol">
-                <form action="<%= request.getContextPath() %>/workspace" method="post">
+                <form action="<%= request.getContextPath() %>/workspace" method="post" class="button_workspace">
                     <input type="hidden" name="workspace_id" value="<%= workspaceItems[i].getID() %>"/>
                     <input class="btn btn-default" type="submit" name="submit_open" value="<fmt:message key="jsp.mydspace.general.open" />"/>
                 </form>

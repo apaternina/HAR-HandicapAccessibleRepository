@@ -86,7 +86,7 @@
              <li class="<%= currentPage.endsWith("/home.jsp")? "active" : "" %>"><a tabindex=""  href="<%= request.getContextPath() %>/" accesskey="1"><span class="glyphicon glyphicon-home"></span> <fmt:message key="jsp.layout.navbar-default.home"/></a></li>
                 
            <li class="dropdown" role="menuitem"  >
-               <a tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown" accesskey="2"><fmt:message key="jsp.layout.navbar-default.browse"/> <b class="caret"></b></a>
+               <a tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown" accesskey="2"><labe><fmt:message key="jsp.layout.navbar-default.browse"/> <b class="caret"></label></b></a>
              <ul class="dropdown-menu" role="menu">
                <li role="menuitem" ><a  href="<%= request.getContextPath() %>/community-list"><fmt:message key="jsp.layout.navbar-default.communities-collections"/></a></li>
                
@@ -129,7 +129,7 @@
 		<%
     } else {
 		%>
-             <a accesskey="4"  tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b></a>
+                <a accesskey="4"  tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b><label></a>
 	<% } %>             
              <ul   class="dropdown-menu" tabindex="" accesskey="5" role="navigation">
                <li role="menuitem"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.layout.navbar-default.users"/></a></li>

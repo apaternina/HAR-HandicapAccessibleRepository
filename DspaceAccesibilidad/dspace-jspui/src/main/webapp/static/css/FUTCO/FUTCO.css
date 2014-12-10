@@ -190,8 +190,19 @@ border-color: #324F69 !important;
 
 div.panel-heading a {
     color:white;
-    
 }
+.pull-right_Adm{
+    margin-right: 30px !important;
+}
+.pull-right_Adm a{
+    color:#FFF !important;
+}
+.panel-heading{
+    background-color: #324F69 !important;
+    background-image: none !important;
+    color: #FFF !important;
+}
+  
 
 .navbar-inverse .navbar-nav > li > a:focus{
    // color:white !important; 
@@ -325,4 +336,18 @@ code {
 }
 a {
 color: #000080;
+}
+
+.button_workspace{
+    width: 30% !important;
+}
+
+.panel-warning > .panel-heading{
+    background-color: #BDCED6 ;
+    color: #000;
+}
+
+.panel-warning_Adm{
+    border-color: #324F69 !important;
+    border-color: #324F69 !important;
 }

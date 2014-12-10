@@ -129,10 +129,10 @@
     {
 %>     
 <dspace:sidebar>
-			<div class="panel panel-warning">
+			<div class="panel panel-warning panel-warning_Adm ">
 			<div class="panel-heading">
 				<fmt:message key="jsp.admintools"/>
-				<span class="pull-right">
+				<span class="pull-right_Adm">
 					<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\")%>"><fmt:message key="jsp.adminhelp"/></dspace:popup>
 				</span>
 			</div>
