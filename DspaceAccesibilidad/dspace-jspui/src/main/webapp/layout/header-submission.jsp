@@ -45,7 +45,7 @@
 %>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title><%= title %> | <%= siteName %></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
