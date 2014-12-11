@@ -360,9 +360,6 @@ color: #000080;
     height: 40px;
 }
 
-
-
-
 @media only screen and (max-width : 769px){
         .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
                 background-color: #324F69 !important;
