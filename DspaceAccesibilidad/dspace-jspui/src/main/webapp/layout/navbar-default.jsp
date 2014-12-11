@@ -80,6 +80,7 @@
            <span class="icon-bar"></span>
          </button>
            <a id="logo" class="navbar-brand" href="<%= request.getContextPath() %>/"><img class="tamañoLogo" src="<%= request.getContextPath() %>/image/FUTCO/LOGOFITCO_trans.png" alt="logo del repositorio eccesible tecnológico comfenalco"/></a><!--<fmt:message key="jsp.layout.navbar-alt-logo"/> -->
+       <!--<img class="tamañoLogo" src="<%= request.getContextPath() %>/image/FUTCO/LOGOFITCO_trans.png" alt="logo del repositorio eccesible tecnológico comfenalco"/> -->
        </div>
        <nav class="collapse navbar-collapse bs-navbar-collapse" role="menubar">
          <ul class="nav navbar-nav">

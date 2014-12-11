@@ -351,3 +351,39 @@ color: #000080;
     border-color: #324F69 !important;
     border-color: #324F69 !important;
 }
+
+.logo{
+    background: url("/jspui/image/FUTCO/futco.png");
+   //background: url("/jspui/image/FUTCO/LOGOFITCO_trans.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+@media only screen and (max-width : 769px){
+        .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+                background-color: #324F69 !important;
+                border-color:  #324F69 !important; 
+        }
+        .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle{
+                 border-color: #324F69;
+        }
+        
+        .navbar-inverse .navbar-toggle{
+            border-color: #324F69;
+            background-color: #324F69 !important;
+        }
+        
+        .banner img {
+        /* zoom: 132%; */
+        width: 100%;
+        margin-top: 50px;
+        }
+        
+       .navbar-collapse{
+            overflow-y: none !important;   
+        }
+}
