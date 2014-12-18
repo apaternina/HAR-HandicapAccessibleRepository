@@ -183,7 +183,7 @@
                     <h1 id="pagePrincipal"><fmt:message key="jsp.layout.header-default.brand.heading-FUTCO" /></h1>
         <fmt:message key="jsp.layout.header-default.brand.description-FUTCO" />
         </div>
-        <div class="col-md-3"><img class="pull-right" src="<%= request.getContextPath() %>/image/FUTCO/futco.png" alt="" >
+        <div class="col-md-3"><img class="pull-right" src="<%= request.getContextPath() %>/image/FUTCO/futco.png" alt="logo del repositorio eccesible tecnológico comfenalco" >
         </div>
 	</div>
 </div>	

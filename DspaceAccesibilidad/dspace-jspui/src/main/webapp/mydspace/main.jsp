@@ -228,7 +228,7 @@
 
     <p><fmt:message key="jsp.mydspace.main.text4" /></p>
 
-    <table class="table" align="center" summary="Table listing unfinished submissions">
+    <table class="table" align="center" summary="Lista de envíos pendientes">
         <tr>
             <th class="oddRowOddCol">&nbsp;</th>
             <th id="t10" class="oddRowEvenCol"><fmt:message key="jsp.mydspace.main.subby"/></th>
