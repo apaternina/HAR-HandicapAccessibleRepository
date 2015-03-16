@@ -110,7 +110,7 @@
     <!--
     Fecha : 20141102
     Autor : Antonio Paternina
-    Descripción : Se se agregan los script y los css para el teclado virtual y la hoja de estilo general de la apliccacion.
+    Descripción : Se se agregan los script y los css para el teclado virtual y la hoja de estilo general de la aplicacion.
     -->
 
     <%--Gooogle Analytics recording.--%>
