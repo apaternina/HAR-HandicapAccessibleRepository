@@ -1,3 +1,10 @@
+<!-- 
+ Fecha : Noviembre del 2014
+ Autor - desarrollador : Antonio José Paternina Cardenas 
+ Descripción : Se  modifica el key del el texto del footer fmt:message.. para mostrar el texto personalizado
+-->
+
+
 <%--
 
     The contents of this file are subject to the license and copyright
