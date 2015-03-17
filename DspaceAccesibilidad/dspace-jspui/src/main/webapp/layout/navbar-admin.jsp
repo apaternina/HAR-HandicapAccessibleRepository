@@ -28,6 +28,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
  <script  type="text/javascript">
+ /* 
+ 	Fecha :  Noviembre de 2014
+ 	Autor - desarrollador : Antonio José Paternina Cardenas
+ 	Descripción : Se agregan las funciones  quitarNoScriptNavbar y quitarNoScript, para quitar las etiquetas noscript, que son
+ 		     leidas por lectores de pantalla, lo que no está bien.
+ */
            quitarNoScriptNavbar();
            quitarNoScript();
     </script>
@@ -51,7 +57,11 @@
     }
 
 %>
-
+ <!--
+ 	Fecha :  Noviembre de 2014
+ 	Autor - desarrollador : Antonio José Paternina Cardenas
+ 	Descripción : Se agregan los acceskey, clases css y key para cambiar la visualización del menú/navbar
+ -->
        <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
            <span class="icon-bar"></span>
