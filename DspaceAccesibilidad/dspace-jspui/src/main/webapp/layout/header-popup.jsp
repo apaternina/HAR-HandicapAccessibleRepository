@@ -47,13 +47,19 @@
         <link rel="stylesheet" href="<%= request.getContextPath() %>/styles.css" type="text/css" />
         <link rel="stylesheet" href="<%= request.getContextPath() %>/print.css" media="print" type="text/css" />
         <link rel="shortcut icon" href="<%= request.getContextPath() %>/favicon.ico" type="image/x-icon"/>
+        
+        
 <%
     if (extraHeadData != null)
         { %>
 <%= extraHeadData %>
 <%
         }
- 
+  /* 
+ 	Fecha :  Noviembre de 2014
+ 	Autor - desarrollador : Antonio José Paternina Cardenas
+ 	Descripción : Se agregan los archivos javascript personalizados y las hojas de estilo personalizadas
+ */
     if (scriptfutco == null || scriptfutco.equals("on"))           //Added code starts here
        {
 %>
