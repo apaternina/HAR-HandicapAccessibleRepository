@@ -17,7 +17,15 @@
 <%--
   - Footer for home page
   --%>
-
+<%--    
+Version: Accessible Space 1.0
+Fecha : 11-nov-2014, 09:10
+Author  : http://www.dspace.org/license
+Modificado por : Antonio Paternina - apaternina
+Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html para que los plugines de accesibilidad
+              puedan leerlo.
+              Se agregan mensajes personalizados
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -47,7 +55,7 @@
 </main>
 <!--<a id="saltarContent" style="bottom:82px;" class="sr-only"  href="#content2">Saltar el pié de página</a>-->
             <%-- Page footer --%>
-             
+            
              <footer class="navbar navbar-inverse navbar-bottom bar_footer">
                
              <div id="designedby" class="container text-muted">

@@ -11,6 +11,14 @@
   - HTML header for main home page
   --%>
 
+  <%--    
+ Version: Accessible Space 1.0
+ Fecha : 02-nov-2014, 22:39
+ Author  : http://www.dspace.org/license
+ Modificado por : Antonio Paternina
+ Descripciòn : Se agregan las reeferencias y condicionales para cargar el archivo 'scriptfutco.js'
+               y 'cssfutco.css'
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.dspace.org/dspace-tags.tld" prefix="dspace" %>
 
@@ -80,9 +88,9 @@
 <%= extraHeadData %>
 <%
               }
- 
+    /*apaternina - se comprueban si los recursos estan no estan caargados ó no estan activos */
     if (scriptfutco == null || scriptfutco.equals("on"))           //Added code starts here
-       {
+        {
 %>
      <script type='text/javascript' src='<%= request.getContextPath() %>/static/js/FUTCO.js'></script>
 <%      }

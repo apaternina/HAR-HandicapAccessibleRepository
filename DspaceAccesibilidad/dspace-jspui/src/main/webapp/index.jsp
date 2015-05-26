@@ -17,7 +17,15 @@
   -
   - This also means there's some business logic, basically some minimal stuff
   - from DSpaceServlet.java.  This shouldn't happen elsewhere in the JSPs.
-  --%>
+--%>
+<!--    
+ Version: Accessible Space 1.0
+ Fecha : 015-nov-2014, 10:16
+ Author  : http://www.dspace.org/license
+ Modificado por : Antonio Paternina
+ Descripciòn : Se cambia el favicon por el del tecnológico comfenalco
+-->
+
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 
@@ -40,54 +48,45 @@
 <%@ page import="org.dspace.core.PluginManager" %>
 <%@ page import="org.dspace.plugin.SiteHomeProcessor" %>
 
-<link rel="shortcut icon" href="<%= request.getContextPath() %>/images/FUTCO/favicon.ico">
+
+<link rel="shortcut icon" href="<%= request.getContextPath()%>/images/FUTCO/favicon.ico">
 <%
     Context context = null;
-    
+
     Locale sessionLocale = UIUtil.getSessionLocale(request);
     Config.set(request.getSession(), Config.FMT_LOCALE, sessionLocale);
-    
-    try
-    {
+
+    try {
         // Obtain a context so that the location bar can display log in status
         context = UIUtil.obtainContext(request);
-        
-        try
-        {
+
+        try {
             SiteHomeProcessor[] chp = (SiteHomeProcessor[]) PluginManager.getPluginSequence(SiteHomeProcessor.class);
-            for (int i = 0; i < chp.length; i++)
-            {
+            for (int i = 0; i < chp.length; i++) {
                 chp[i].process(context, request, response);
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             Logger log = Logger.getLogger("org.dspace.jsp");
             log.error("caught exception: ", e);
             throw new ServletException(e);
         }
-        
+
         // Show home page JSP
         JSPManager.showJSP(request, response, "/home.jsp");
-    }
-    catch (SQLException se)
-    {
+    } catch (SQLException se) {
         // Database error occurred.
         Logger log = Logger.getLogger("org.dspace.jsp");
         log.warn(LogManager.getHeader(context,
-            "database_error",
-            se.toString()), se);
+                "database_error",
+                se.toString()), se);
 
         // Also email an alert
         UIUtil.sendAlert(request, se);
 
         JSPManager.showInternalError(request, response);
-    }
-    finally
-    {
-      if (context != null)
-      {
-      	context.abort();
-      }
+    } finally {
+        if (context != null) {
+            context.abort();
+        }
     }
 %>

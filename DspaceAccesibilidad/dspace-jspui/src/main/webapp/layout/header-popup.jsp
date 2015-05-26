@@ -10,7 +10,13 @@
 <%--
   - HTML header for main home page
   --%>
-
+<%--    
+Version: Accessible Space 1.0
+Fecha : 16-nov-2014, 02:10
+Author  : http://www.dspace.org/license
+Modificado por : Antonio Paternina - apaternina
+Descripciòn : Se agregan referencias para el cargado de script y css
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.dspace.org/dspace-tags.tld" prefix="dspace" %>
 

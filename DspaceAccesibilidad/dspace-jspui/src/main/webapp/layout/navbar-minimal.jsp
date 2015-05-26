@@ -11,6 +11,15 @@
   - Default navigation bar
 --%>
 
+<%--    
+ Version: Accessible Space 1.0
+ Fecha : 019-nov-2014, 22:39
+ Author  : http://www.dspace.org/license
+ Modificado por : Antonio Paternina
+ Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html para que los plugines de accesibilidad
+                puedan leerlo
+--%>
+
 <%@page import="org.apache.commons.lang.StringUtils"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
@@ -34,66 +43,62 @@
     EPerson user = (EPerson) request.getAttribute("dspace.current.user");
 
     // Is the logged in user an admin
-    Boolean admin = (Boolean)request.getAttribute("is.admin");
+    Boolean admin = (Boolean) request.getAttribute("is.admin");
     boolean isAdmin = (admin == null ? false : admin.booleanValue());
 
     // Get the current page, minus query string
     String currentPage = UIUtil.getOriginalURL(request);
-    int c = currentPage.indexOf( '?' );
-    if( c > -1 )
-    {
-        currentPage = currentPage.substring( 0, c );
+    int c = currentPage.indexOf('?');
+    if (c > -1) {
+        currentPage = currentPage.substring(0, c);
     }
 
     // E-mail may have to be truncated
     String navbarEmail = null;
 
-    if (user != null)
-    {
+    if (user != null) {
         navbarEmail = user.getEmail();
     }
 %>
 
 
-       <div class="navbar-header">
-         <a class="navbar-brand" href="<%= request.getContextPath() %>/"><img  class="tamañoLogo"  src="<%= request.getContextPath() %>/image/FUTCO/LOGOFITCO_trans.png" alt=""/></a>    
-       </div>
-       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-       <div class="nav navbar-nav navbar-right">
-		<ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
-         <%
-    if (user != null)
-    {
-		%>
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.loggedin">
-		      <fmt:param><%= StringUtils.abbreviate(navbarEmail, 20) %></fmt:param>
-		  </fmt:message> <b class="caret"></b></a>
-		<%
-    } else {
-		%>
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b></a>
-	<% } %>             
-             <ul class="dropdown-menu">
-               <li><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.layout.navbar-default.users"/></a></li>
-               <li><a href="<%= request.getContextPath() %>/subscribe"><fmt:message key="jsp.layout.navbar-default.receive"/></a></li>
-               <li><a href="<%= request.getContextPath() %>/profile"><fmt:message key="jsp.layout.navbar-default.edit"/></a></li>
+<div class="navbar-header">
+    <a class="navbar-brand" href="<%= request.getContextPath()%>/"><img  class="tamañoLogo"  src="<%= request.getContextPath()%>/image/FUTCO/LOGOFITCO_trans.png" alt=""/></a>    
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+    <div class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <%
+                    if (user != null) {
+                %>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.loggedin">
+                        <fmt:param><%= StringUtils.abbreviate(navbarEmail, 20)%></fmt:param>
+                    </fmt:message> <b class="caret"></b></a>
+                    <%
+                    } else {
+                    %>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <fmt:message key="jsp.layout.navbar-default.sign"/> <b class="caret"></b></a>
+                    <% }%>             
+                <ul class="dropdown-menu">
+                    <li><a href="<%= request.getContextPath()%>/mydspace"><fmt:message key="jsp.layout.navbar-default.users"/></a></li>
+                    <li><a href="<%= request.getContextPath()%>/subscribe"><fmt:message key="jsp.layout.navbar-default.receive"/></a></li>
+                    <li><a href="<%= request.getContextPath()%>/profile"><fmt:message key="jsp.layout.navbar-default.edit"/></a></li>
 
-		<%
-		  if (isAdmin)
-		  {
-		%>
-			   <li class="divider"></li>  
-               <li><a href="<%= request.getContextPath() %>/dspace-admin"><fmt:message key="jsp.administer"/></a></li>
-		<%
-		  }
-		  if (user != null) {
-		%>
-		<li><a href="<%= request.getContextPath() %>/logout"><span class="glyphicon glyphicon-log-out"></span> <fmt:message key="jsp.layout.navbar-default.logout"/></a></li>
-		<% } %>
-             </ul>
-           </li>
-          </ul>
-          
-	</div>
-    </nav>
+                    <%
+                        if (isAdmin) {
+                    %>
+                    <li class="divider"></li>  
+                    <li><a href="<%= request.getContextPath()%>/dspace-admin"><fmt:message key="jsp.administer"/></a></li>
+                        <%
+                            }
+                            if (user != null) {
+                        %>
+                    <li><a href="<%= request.getContextPath()%>/logout"><span class="glyphicon glyphicon-log-out"></span> <fmt:message key="jsp.layout.navbar-default.logout"/></a></li>
+                        <% }%>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
