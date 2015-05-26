@@ -1,19 +1,13 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
-    Created on : 02-nov-2014, 22:36:21
-    Author     : Dspace
+    Fecha : 02-nov-2014, 22:36:21
+    Author  : Antonio Paternina - apaternina
+    Descripciòn : Se crea el archivo, que contiene las clases css para dar estilo al
+                  componente JSPUI
 */
 
 
 .sr-only{
-  
-    //display: none;
     text-indent: -5000px;
-    
 }
 
 a[id="saltarContent"]:focus{
@@ -27,8 +21,6 @@ a[id="saltarContent"]:focus{
     clip: initial;
     margin-top: -10px;
 }
-
-
 .item_li_de_ul{
     display: block;
     padding: 3px 20px;
@@ -38,25 +30,16 @@ a[id="saltarContent"]:focus{
     color: #333;
     white-space: nowrap;
 }
-/*.padding_ul_li{
-    display: flex;
-}*/
-
 .padding_ul{
     padding: 0px;
 }
 
 .padding_ul_li:hover{
     background-image: linear-gradient(to bottom,#428bca 0,#3071a9 100%);
-    
 }
 .padding_ul_li a:hover{
     text-decoration: none !important;
     color:white !important;
-}
-
-.padding_ul_li:focus{
-  //  background-image: linear-gradient(to bottom,#428bca 0,#3071a9 100%) !important;
 }
 .padding_ul_li a:focus{
     text-decoration: none !important;
@@ -65,16 +48,8 @@ a[id="saltarContent"]:focus{
 }
 
 .alertMensaje{
-    /*display: none !important;*/
     text-indent:-5000px !important;
 }
-
-
-/*
-
-
-
-*/
 
 .navbar-brand{
     padding: 5px 15px !important;
@@ -86,22 +61,21 @@ a[id="saltarContent"]:focus{
 }
 
 .navbar-inverse{
-background-image:none !important;
-background-color:#F7F7F7 !important;
-border-color: #324F69 !important;
-  
+    background-image:none !important;
+    background-color:#F7F7F7 !important;
+    border-color: #324F69 !important;
+
 }
 
 .navbar-inverse .navbar-nav>li>a:hover{
     text-decoration: underline !important;
     color:#324F69;
-    
+
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
-  background-color:#324F69 !important;
-    
-}
+    background-color:#324F69 !important;
 
+}
 
 .navbar-inverse .navbar-nav>.active>a{
     background-color:#324F69 !important;
@@ -116,7 +90,7 @@ border-color: #324F69 !important;
     color:#324F69;
 }
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{
-    
+
     text-shadow: none;
 }
 .navbar-inverse .navbar-nav>.dropdown>a .caret{
@@ -130,7 +104,6 @@ border-color: #324F69 !important;
 
 .banner img{
     zoom: 60%;
-    //transform: scale(0.9);
     width: 114%;
 }
 
@@ -140,11 +113,11 @@ border-color: #324F69 !important;
 
 .bar_footer{
     background-color: #324F69 !important;
-    
+
 }
 .bar_footer a{
     color:#FFFFFF !important;
-    
+
 }
 .text-muted{
     color:#FFFFFF !important;
@@ -152,7 +125,7 @@ border-color: #324F69 !important;
 
 .heigthBanner{
     height: 200px !important;
-    
+
 }
 .btn-success{
     background-image: none;
@@ -167,16 +140,10 @@ border-color: #324F69 !important;
 .btn-success li,.btn-success a,.btn-success span{
     color: black !important;
     text-shadow:none;
-    
 }
 .panel-primary>.panel-heading{
     background-color: #003366;
     background-image: none;
-    
-}
-
-.panel-body{
-   // background-color: #EDF1FF;
 }
 
 .btn-info{
@@ -186,7 +153,6 @@ border-color: #324F69 !important;
     text-shadow: none !important;
     background-image:none !important;
 }
-
 
 div.panel-heading a {
     color:white;
@@ -202,12 +168,6 @@ div.panel-heading a {
     background-image: none !important;
     color: #FFF !important;
 }
-  
-
-.navbar-inverse .navbar-nav > li > a:focus{
-   // color:white !important; 
-    
-}
 
 .btn-success:hover{
     color:black !important;
@@ -220,26 +180,24 @@ div.panel-heading a {
     color: black !important;
     border-color: transparent !important;
     text-shadow: none !important;
-    
 }
-
 .alert-warning{
     background-image: none;
     background-color: #800000;
     color: #FFFFFF !important;
 }
+.alert-warning a{
+    color: #FFFFFF !important;
+}
+
 .dropdown-menualert-danger{
     background-image: none !important;
     background-color: #800000;
     color: #FFFFFF !important;
 }
 
-.alert-warning a{
-    color: #FFFFFF !important;
-}
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small{
     color:#303030 !important;
-    
 }
 
 .btn-danger,.btn-danger:focus,.btn-danger:hover{
@@ -247,11 +205,9 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
     border-color: #C12E2A;
     background-color: #800000
 }
-
 .btn_newSerch{
     color:#000000 !important;
 }
-
 code {
     padding: 2px 4px;
     font-size: 90%;
@@ -278,7 +234,6 @@ code {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
-
 .btn-warning,.btn-warning:focus, .btn-warning:hover {
     background-image: none;
     background-repeat: repeat-x;
@@ -328,14 +283,14 @@ code {
     border-top-color: #324F69 !important;
     border-bottom-color: #324F69 !important;
     color:#324F69 !important;
-    
+
 }
 
 .media-body a{
-   color: #000080 !important;   
+    color: #000080 !important;   
 }
 a {
-color: #000080;
+    color: #000080;
 }
 
 .button_workspace{
@@ -354,33 +309,31 @@ color: #000080;
 
 .logo{
     background: url("/jspui/image/FUTCO/futco.png");
-   //background: url("/jspui/image/FUTCO/LOGOFITCO_trans.png");
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
 }
 
 @media only screen and (max-width : 769px){
-        .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
-                background-color: #324F69 !important;
-                border-color:  #324F69 !important; 
-        }
-        .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle{
-                 border-color: #324F69;
-        }
-        
-        .navbar-inverse .navbar-toggle{
-            border-color: #324F69;
-            background-color: #324F69 !important;
-        }
-        
-        .banner img {
-        /* zoom: 132%; */
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+        background-color: #324F69 !important;
+        border-color:  #324F69 !important; 
+    }
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle{
+        border-color: #324F69;
+    }
+
+    .navbar-inverse .navbar-toggle{
+        border-color: #324F69;
+        background-color: #324F69 !important;
+    }
+
+    .banner img {
         width: 100%;
         margin-top: 50px;
-        }
-        
-       .navbar-collapse{
-            overflow-y: none !important;   
-        }
+    }
+
+    .navbar-collapse{
+        overflow-y: none !important;   
+    }
 }
