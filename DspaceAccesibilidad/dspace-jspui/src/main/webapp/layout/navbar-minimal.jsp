@@ -12,10 +12,10 @@
 --%>
 
 <%--    
- Version: Accessible Space 1.0
- Fecha : 019-nov-2014, 22:39
+ Version: HAR(Handicap Accessible Repository) 1.0
+ Fecha : 19-nov-2014
  Author  : http://www.dspace.org/license
- Modificado por : Antonio Paternina
+ Modificado por : Antonio Paternina - apaternina
  Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html para que los plugines de accesibilidad
                 puedan leerlo
 --%>

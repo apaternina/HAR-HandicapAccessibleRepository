@@ -1,8 +1,9 @@
-<!-- 
- Fecha : Noviembre del 2014
- Autor - desarrollador : Antonio José Paternina Cardenas 
- Descripción : Se  modifica el key del el texto del footer fmt:message.. para mostrar el texto personalizado
--->
+<!--
+    Version: HAR(Handicap Accessible Repository) 1.0
+    Fecha : 14-nov-2014
+    Author  : Antonio Paternina - apaternina
+    Descripciòn : Se  modifica el key del el texto del footer fmt:message.. para mostrar el texto personalizado
+ -->
 
 
 <%--

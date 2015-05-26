@@ -12,7 +12,7 @@
 --%>
 
 <%--    
-Version: Accessible Space 1.0
+Version: AHAR(Handicap Accessible Repository) 1.0
 Fecha : 019-nov-2014, 22:39
 Author  : http://www.dspace.org/license
 Modificado por : Antonio Paternina - apaternina

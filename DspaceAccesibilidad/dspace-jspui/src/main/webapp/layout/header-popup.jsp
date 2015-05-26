@@ -11,7 +11,7 @@
   - HTML header for main home page
   --%>
 <%--    
-Version: Accessible Space 1.0
+Version: HAR(Handicap Accessible Repository) 1.0
 Fecha : 16-nov-2014, 02:10
 Author  : http://www.dspace.org/license
 Modificado por : Antonio Paternina - apaternina
