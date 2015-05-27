@@ -337,4 +337,11 @@ a {
     .navbar-collapse{
         overflow-y: none !important;   
     }
+
+    .software_footer_default{
+        position: absolute;
+        top: 17px;
+        left: 23px;
+        font-size: 20px;
+    }
 }
