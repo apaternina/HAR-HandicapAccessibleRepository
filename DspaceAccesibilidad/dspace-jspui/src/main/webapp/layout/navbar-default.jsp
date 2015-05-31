@@ -10,13 +10,13 @@
 <%--
   - Default navigation bar
 --%>
-  <%--    
- Version: HAR(Handicap Accessible Repository) 1.0
- Fecha : 19-nov-2014, 22:39
- Author  : http://www.dspace.org/license
- Modificado por : Antonio Paternina - apaternina
- Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html para que los plugines de accesibilidad
-                puedan leerlo
+<%--    
+Version: HAR(Handicap Accessible Repository) 1.0
+Fecha : 19-nov-2014, 22:39
+Author  : http://www.dspace.org/license
+Modificado por : Antonio Paternina - apaternina
+Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html para que los plugines de accesibilidad
+              puedan leerlo
 --%>
 <%@page import="org.apache.commons.lang.StringUtils"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -88,12 +88,10 @@
 <nav class="collapse navbar-collapse bs-navbar-collapse" role="menubar">
     <ul class="nav navbar-nav">
         <li class="<%= currentPage.endsWith("/home.jsp") ? "active" : ""%>"><a tabindex=""  href="<%= request.getContextPath()%>/" accesskey="1"><span class="glyphicon glyphicon-home"></span> <fmt:message key="jsp.layout.navbar-default.home"/></a></li>
-
         <li class="dropdown" role="menuitem"  >
             <a tabindex="" href="#" class="dropdown-toggle" data-toggle="dropdown" accesskey="2"><fmt:message key="jsp.layout.navbar-default.browse"/> <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
                 <li role="menuitem" ><a  href="<%= request.getContextPath()%>/community-list"><fmt:message key="jsp.layout.navbar-default.communities-collections"/></a></li>
-
                 <!--<li class="divider"></li>-->
                 <div class="divider" ></div>
 
@@ -155,10 +153,10 @@
 
         <%-- Search Box --%>
         <form method="get" action="<%= request.getContextPath()%>/simple-search" class="navbar-form navbar-right" scope="search">
-
             <div class="form-group">
                 <label for="tequery"><fmt:message key="jsp.layout.navbar-default.search"/></label>
-                <input tabindex="" type="text" class="keyboard form-control_search" style="width:none;" placeholder="<fmt:message key="jsp.layout.navbar-default.search"/>" name="query" id="tequery" size="25"/>
+                <input tabindex="" type="text" class="keyboard form-control_search" style="width:none;"
+                       placeholder="<fmt:message key="jsp.layout.navbar-default.search"/>" name="query" id="tequery" size="25"/>
             </div>
 
             <button tabindex="" type="submit" title="buscar" class="btn btn-primary" value="Buscar" navbar-brand><span class="glyphicon glyphicon-search" role="button" id="btn_search" name="btn_search"></span></button>
