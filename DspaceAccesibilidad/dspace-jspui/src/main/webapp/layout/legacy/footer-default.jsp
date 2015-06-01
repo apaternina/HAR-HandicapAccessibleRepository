@@ -68,8 +68,10 @@
                             </td>
                         </tr>
                     </table>
+
                 </td>
             </tr>
         </table>
+        <div class="software_footer_default"><fmt:message key="jsp.layout-footer-HAR-name"/></div>
     </body>
 </html>

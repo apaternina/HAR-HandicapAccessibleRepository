@@ -74,7 +74,7 @@ Descripciòn : Se agregan atributos a etiquetas y se modifica el codigo html par
            <!-- <a target="_blank" href="<%= request.getContextPath()%>/feedback"><fmt:message key="jsp.layout.footer-default.feedback"/></a>-->
             <!--<a href="<%= request.getContextPath()%>/htmlmap"></a></p>-->
         </div>
-        <div class="software_footer_default">HAR(Handicap Accessible Repository) <!--<fmt:message key="jsp.layout.footer-FUTCO.text"/> --></div>
+        <div class="software_footer_default"><fmt:message key="jsp.layout-footer-HAR-name"/></div>
     </div>
 </footer>
 </body>

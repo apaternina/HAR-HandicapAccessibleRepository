@@ -131,12 +131,14 @@ a[id="saltarContent"]:focus{
 .btn-success{
     background-image: none;
     background-color: #BDCED6 !important;
-    border-color: transparent !important;
+    border-color: transparent;
     color:black !important;
     text-shadow:none !important;
+
 }
 .btn-success:hover,.btn-success:focus {
     color:black !important;
+    border-color: #adadad;
 }
 .btn-success li,.btn-success a,.btn-success span{
     color: black !important;
@@ -179,9 +181,14 @@ div.panel-heading a {
     background-repeat: repeat-x;
     background-color: #BDCED6 !important;
     color: black !important;
-    border-color: transparent !important;
+    border-color: transparent;
     text-shadow: none !important;
 }
+.btn-primary:hove, btn-primary:focus{
+    border-color: #adadad;
+
+}
+
 .alert-warning{
     background-image: none;
     background-color: #800000;
@@ -234,6 +241,7 @@ code {
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    outline-color: #800000;
 }
 .btn-warning,.btn-warning:focus, .btn-warning:hover {
     background-image: none;
@@ -315,6 +323,26 @@ a {
     height: 40px;
 }
 
+.software_footer_default{
+    top: 16px;
+    left: 23px;
+    font-size: 17px;
+    width: 336px;
+    float: left;
+    padding-top: 10px;
+}
+.btn-default{
+    background-image: none;
+    background-repeat: repeat-x;
+    background-color: #BDCED6 !important;
+    color: black !important;
+
+    text-shadow: none !important;
+
+}
+
+
+
 @media only screen and (max-width : 769px){
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
         background-color: #324F69 !important;
@@ -337,11 +365,20 @@ a {
     .navbar-collapse{
         overflow-y: none !important;   
     }
-
-    .software_footer_default{
-        position: absolute;
-        top: 17px;
+    .software_footer_default {
+        top: 16px;
         left: 23px;
-        font-size: 20px;
+        font-size: 17px;
+        width: 100%;
+        float: left;
+        padding-top: 10px;
+        text-align: center;
     }
+    #footer_feedback {
+        padding-top: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+
 }
